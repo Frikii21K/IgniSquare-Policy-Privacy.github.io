@@ -15,9 +15,9 @@ body {
 /* Contenedor principal */
 .policy-container {
     background-color: #ffffff;
-    border-radius: 12px;
+    border-radius: 20px;
     padding: 24px;
-    width: 95%;
+    width: 90%;
     max-width: 800px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease-in-out;
