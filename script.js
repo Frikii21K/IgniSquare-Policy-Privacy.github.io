@@ -62,43 +62,58 @@ document.addEventListener("DOMContentLoaded", function () {
             "section_7_text": "Nous pouvons mettre à jour cette politique de confidentialité à tout moment.",
             "section_8": "8. Contact",
             "contact_text": "Si vous avez des questions concernant cette politique de confidentialité, vous pouvez nous contacter à :"
+        },
+        "pt": {
+            "title": "Política de Privacidade",
+            "last_update": "Última atualização:",
+            "description": "Esta política de privacidade descreve como [Nome do Aplicativo] coleta, usa e protege suas informações ao usar nosso aplicativo.",
+            "section_1": "1. Informações que Coletamos",
+            "section_1_text": "Podemos coletar os seguintes tipos de informações ao usar nosso aplicativo:",
+            "section_2": "2. Como Usamos Suas Informações",
+            "section_2_text": "As informações coletadas são usadas para:",
+            "section_3": "3. Compartilhamento de Dados",
+            "section_3_text": "Não compartilhamos suas informações pessoais com terceiros, exceto nos seguintes casos:",
+            "section_4": "4. Segurança dos Dados",
+            "section_4_text": "Implementamos medidas de segurança para proteger seus dados contra acessos não autorizados, alterações e perdas.",
+            "section_5": "5. Direitos do Usuário",
+            "section_5_text": "Você tem o direito de:",
+            "section_6": "6. Permissões Solicitadas",
+            "section_6_text": "Nosso aplicativo pode solicitar permissões para acessar:",
+            "section_7": "7. Alterações nesta Política",
+            "section_7_text": "Podemos atualizar esta política de privacidade a qualquer momento.",
+            "section_8": "8. Contato",
+            "contact_text": "Se você tiver dúvidas sobre esta política de privacidade, pode nos contatar em:"
+        },
+        "de": {
+            "title": "Datenschutzrichtlinie",
+            "last_update": "Letzte Aktualisierung:",
+            "description": "Diese Datenschutzrichtlinie beschreibt, wie [App-Name] Ihre Informationen sammelt, verwendet und schützt, wenn Sie unsere Anwendung nutzen.",
+            "section_1": "1. Welche Informationen wir sammeln",
+            "section_1_text": "Wir können die folgenden Arten von Informationen sammeln, wenn Sie unsere Anwendung nutzen:",
+            "section_2": "2. Wie wir Ihre Informationen verwenden",
+            "section_2_text": "Die gesammelten Informationen werden verwendet, um:",
+            "section_3": "3. Datenweitergabe",
+            "section_3_text": "Wir geben Ihre persönlichen Daten nicht an Dritte weiter, außer in den folgenden Fällen:",
+            "section_4": "4. Datensicherheit",
+            "section_4_text": "Wir setzen Sicherheitsmaßnahmen ein, um Ihre Daten vor unbefugtem Zugriff, Änderungen und Verlust zu schützen.",
+            "section_5": "5. Benutzerrechte",
+            "section_5_text": "Sie haben das Recht auf:",
+            "section_6": "6. Angeforderte Berechtigungen",
+            "section_6_text": "Unsere Anwendung kann Berechtigungen für den Zugriff auf folgende Informationen anfordern:",
+            "section_7": "7. Änderungen dieser Richtlinie",
+            "section_7_text": "Wir können diese Datenschutzrichtlinie jederzeit aktualisieren.",
+            "section_8": "8. Kontakt",
+            "contact_text": "Wenn Sie Fragen zu dieser Datenschutzrichtlinie haben, können Sie uns unter folgender Adresse kontaktieren:"
         }
     };
 
-    // Detectar el idioma del usuario
-    const userLang = navigator.language.substring(0, 2); // Obtiene los dos primeros caracteres del idioma
-    const lang = translations[userLang] ? userLang : "en"; // Si no está en la lista, usa inglés como predeterminado
+    const userLang = navigator.language.substring(0, 2);
+    const lang = translations[userLang] ? userLang : "en";
 
-    // Función para aplicar la traducción
     function translatePage() {
-        const textElements = {
-            ".policy-title": "title",
-            ".policy-text:first-of-type": "last_update",
-            ".policy-text:nth-of-type(2)": "description",
-            ".policy-section-title:nth-of-type(1)": "section_1",
-            ".policy-text:nth-of-type(3)": "section_1_text",
-            ".policy-section-title:nth-of-type(2)": "section_2",
-            ".policy-text:nth-of-type(4)": "section_2_text",
-            ".policy-section-title:nth-of-type(3)": "section_3",
-            ".policy-text:nth-of-type(5)": "section_3_text",
-            ".policy-section-title:nth-of-type(4)": "section_4",
-            ".policy-text:nth-of-type(6)": "section_4_text",
-            ".policy-section-title:nth-of-type(5)": "section_5",
-            ".policy-text:nth-of-type(7)": "section_5_text",
-            ".policy-section-title:nth-of-type(6)": "section_6",
-            ".policy-text:nth-of-type(8)": "section_6_text",
-            ".policy-section-title:nth-of-type(7)": "section_7",
-            ".policy-text:nth-of-type(9)": "section_7_text",
-            ".policy-section-title:nth-of-type(8)": "section_8",
-            ".policy-text:nth-of-type(10)": "contact_text"
-        };
-
-        for (const selector in textElements) {
-            const element = document.querySelector(selector);
-            if (element) {
-                element.innerText = translations[lang][textElements[selector]];
-            }
-        }
+        document.querySelector(".policy-title").innerText = translations[lang]["title"];
+        document.querySelector(".policy-text").innerText = translations[lang]["last_update"];
+        document.querySelector(".policy-text + p").innerText = translations[lang]["description"];
     }
 
     translatePage();

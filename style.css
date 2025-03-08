@@ -1,26 +1,26 @@
 /* Estilo general */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0; /* Fondo claro */
+    background-color: #f0f0f0;
     color: #333;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: auto;
     min-height: 100vh;
     padding: 20px;
 }
 
 /* Contenedor principal */
 .policy-container {
-    background-color: #ffffff; /* Fondo blanco */
+    background-color: #ffffff;
     border-radius: 10px;
     padding: 20px;
     width: 90%;
     max-width: 800px;
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease-in-out;
 }
 
 /* Título de la política */
@@ -32,7 +32,7 @@ body {
     margin-bottom: 20px;
 }
 
-/* Títulos de las secciones */
+/* Secciones */
 .policy-section-title {
     font-size: 18px;
     font-weight: bold;
@@ -49,7 +49,7 @@ body {
     text-align: justify;
 }
 
-/* Lista de puntos */
+/* Lista */
 .policy-list {
     font-size: 16px;
     color: #7f8c8d;
@@ -70,4 +70,81 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+/* ---------- RESPONSIVE DESIGN ---------- */
+
+/* Tablets y pantallas medianas */
+@media screen and (max-width: 768px) {
+    .policy-container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .policy-title {
+        font-size: 22px;
+    }
+
+    .policy-section-title {
+        font-size: 17px;
+    }
+
+    .policy-text, .policy-list {
+        font-size: 15px;
+    }
+}
+
+/* Teléfonos pequeños */
+@media screen and (max-width: 480px) {
+    .policy-container {
+        width: 100%;
+        padding: 10px;
+        border-radius: 0;
+    }
+
+    .policy-title {
+        font-size: 20px;
+    }
+
+    .policy-section-title {
+        font-size: 16px;
+    }
+
+    .policy-text, .policy-list {
+        font-size: 14px;
+    }
+}
+
+/* ----- Compatibilidad con dispositivos plegables ----- */
+@media (screen-spanning: single-fold-vertical) {
+    .policy-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Divide en dos columnas */
+        column-gap: 20px;
+        max-width: 100%;
+    }
+}
+
+/* Plegables en modo HALF_OPENED */
+@media (max-width: 900px) and (max-height: 600px) {
+    .policy-container {
+        width: 95%;
+        height: 100vh;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .policy-title {
+        font-size: 18px;
+    }
+
+    .policy-section-title {
+        font-size: 15px;
+    }
+
+    .policy-text, .policy-list {
+        font-size: 13px;
+    }
 }
