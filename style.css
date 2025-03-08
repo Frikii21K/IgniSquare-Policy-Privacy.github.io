@@ -1,7 +1,7 @@
-/* Estilo general */
+/* Fuente Material Design */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
     color: #333;
     margin: 0;
     padding: 0;
@@ -15,36 +15,37 @@ body {
 /* Contenedor principal */
 .policy-container {
     background-color: #ffffff;
-    border-radius: 10px;
-    padding: 20px;
-    width: 90%;
+    border-radius: 12px;
+    padding: 24px;
+    width: 95%;
     max-width: 800px;
-    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease-in-out;
 }
 
-/* Título de la política */
+/* Título principal */
 .policy-title {
-    font-size: 24px;
+    font-size: 26px;
     font-weight: bold;
     color: #2c3e50;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
 }
 
 /* Secciones */
 .policy-section-title {
-    font-size: 18px;
-    font-weight: bold;
+    font-size: 20px;
+    font-weight: 700;
     color: #34495e;
     margin-top: 20px;
-    margin-bottom: 10px;
+    border-left: 4px solid #2980b9;
+    padding-left: 10px;
 }
 
-/* Texto de la política */
+/* Texto */
 .policy-text {
     font-size: 16px;
-    color: #7f8c8d;
+    color: #555;
     line-height: 1.6;
     text-align: justify;
 }
@@ -52,9 +53,8 @@ body {
 /* Lista */
 .policy-list {
     font-size: 16px;
-    color: #7f8c8d;
+    color: #444;
     line-height: 1.6;
-    text-align: justify;
     padding-left: 20px;
 }
 
@@ -64,21 +64,21 @@ body {
 
 /* Enlaces */
 a {
-    color: #2980b9;
+    color: #007BFF;
     text-decoration: none;
+    font-weight: 500;
 }
 
 a:hover {
     text-decoration: underline;
 }
 
-/* ---------- RESPONSIVE DESIGN ---------- */
+/* ----- RESPONSIVE DESIGN ----- */
 
-/* Tablets y pantallas medianas */
+/* Tablets */
 @media screen and (max-width: 768px) {
     .policy-container {
-        width: 95%;
-        padding: 15px;
+        padding: 16px;
     }
 
     .policy-title {
@@ -86,65 +86,29 @@ a:hover {
     }
 
     .policy-section-title {
-        font-size: 17px;
-    }
-
-    .policy-text, .policy-list {
-        font-size: 15px;
+        font-size: 18px;
     }
 }
 
-/* Teléfonos pequeños */
+/* Teléfonos */
 @media screen and (max-width: 480px) {
     .policy-container {
         width: 100%;
-        padding: 10px;
+        padding: 12px;
         border-radius: 0;
     }
 
     .policy-title {
         font-size: 20px;
     }
-
-    .policy-section-title {
-        font-size: 16px;
-    }
-
-    .policy-text, .policy-list {
-        font-size: 14px;
-    }
 }
 
-/* ----- Compatibilidad con dispositivos plegables ----- */
+/* Dispositivos plegables en modo HALF_OPENED */
 @media (screen-spanning: single-fold-vertical) {
     .policy-container {
         display: grid;
-        grid-template-columns: 1fr 1fr; /* Divide en dos columnas */
-        column-gap: 20px;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 16px;
         max-width: 100%;
-    }
-}
-
-/* Plegables en modo HALF_OPENED */
-@media (max-width: 900px) and (max-height: 600px) {
-    .policy-container {
-        width: 95%;
-        height: 100vh;
-        padding: 10px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .policy-title {
-        font-size: 18px;
-    }
-
-    .policy-section-title {
-        font-size: 15px;
-    }
-
-    .policy-text, .policy-list {
-        font-size: 13px;
     }
 }
