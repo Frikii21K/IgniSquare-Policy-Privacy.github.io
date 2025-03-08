@@ -8,42 +8,66 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-  }
-  
-  /* Contenedor principal */
-  .policy-container {
+    height: auto;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Contenedor principal */
+.policy-container {
     background-color: #ffffff; /* Fondo blanco */
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
     width: 90%;
     max-width: 800px;
-  }
-  
-  /* Título de la política */
-  .policy-title {
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Título de la política */
+.policy-title {
     font-size: 24px;
     font-weight: bold;
     color: #2c3e50;
     text-align: center;
     margin-bottom: 20px;
-  }
-  
-  /* Títulos de las secciones */
-  .policy-section-title {
+}
+
+/* Títulos de las secciones */
+.policy-section-title {
     font-size: 18px;
     font-weight: bold;
     color: #34495e;
     margin-top: 20px;
     margin-bottom: 10px;
-  }
-  
-  /* Texto de la política */
-  .policy-text {
+}
+
+/* Texto de la política */
+.policy-text {
     font-size: 16px;
     color: #7f8c8d;
     line-height: 1.6;
     text-align: justify;
-  }
-  
+}
+
+/* Lista de puntos */
+.policy-list {
+    font-size: 16px;
+    color: #7f8c8d;
+    line-height: 1.6;
+    text-align: justify;
+    padding-left: 20px;
+}
+
+.policy-list li {
+    margin-bottom: 10px;
+}
+
+/* Enlaces */
+a {
+    color: #2980b9;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
