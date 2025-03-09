@@ -74,17 +74,20 @@ a:hover {
 
 /* Custom Widget de Traducción */
 #custom_translate_wrapper {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    z-index: 9999;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 1000;
     background: #fff;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    padding: 4px 8px;
-    box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+    border-radius: 8px;
+    padding: 8px;
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
     font-family: 'Roboto', sans-serif;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
 }
+
 
 #custom_translate_wrapper::after {
     content: '▼';
@@ -94,16 +97,18 @@ a:hover {
 }
 
 #custom_translate {
-    background: #fff;
+    background: transparent;
     border: none;
     font-size: 14px;
     color: #333;
     outline: none;
     cursor: pointer;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: background 0.3s ease;
 }
+
 
 /* Ocultar el widget original de Google Translate desplazándolo fuera de la pantalla */
 #google_translate_element {
@@ -167,6 +172,17 @@ body > .skiptranslate {
     }
 }
 
+@media screen and (max-width: 480px) {
+    #custom_translate_wrapper {
+        padding: 8px;
+    }
+
+    #custom_translate {
+        font-size: 13px;
+        padding: 4px 8px;
+    }
+ 
+}
 /* Dispositivos plegables en modo HALF_OPENED */
 @media (screen-spanning: single-fold-vertical) {
     .policy-container {
