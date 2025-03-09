@@ -74,8 +74,8 @@ a:hover {
 
 /* Custom Widget de Traducción */
 #custom_translate_wrapper {
-    position: fixed;
-    top: 15px;
+    position: absolute;
+    top: 55px;
     right: 15px;
     z-index: 1000;
     background: #fff;
@@ -90,7 +90,6 @@ a:hover {
 
 
 #custom_translate_wrapper::after {
-    content: '▼';
     font-size: 10px;
     color: #333;
     margin-left: 5px;

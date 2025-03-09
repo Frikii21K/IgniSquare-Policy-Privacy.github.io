@@ -4,44 +4,35 @@ function googleTranslateElementInit() {
     pageLanguage: 'es',
     autoDisplay: false
   }, 'google_translate_element');
-
-  // Esperar un poco antes de intentar traducir automáticamente
-  setTimeout(triggerTranslation, 1000);
+  
+  // Espera hasta que el widget esté listo
+  setTimeout(triggerTranslation, 1000);  // Esto puede ajustarse para ser más preciso
 }
 
 function triggerTranslation() {
-  // Si el usuario ha seleccionado manualmente un idioma, no forzar traducción
-  const savedLang = localStorage.getItem("selectedLanguage");
-  if (savedLang) return;
-
-  // Detecta el idioma del usuario (tomando los dos primeros caracteres)
-  let userLang = navigator.language.slice(0, 2);
-
-  // Idiomas permitidos para traducción
-  const allowedLanguages = ["es", "en", "fr", "pt", "de"];
-
-  // Si el usuario tiene español, no se realiza traducción automática.
-  if (userLang === "es") {
+  const googleCombo = document.querySelector('.goog-te-combo');
+  if (!googleCombo) {
+    // Si el elemento no está disponible, vuelve a intentarlo en 500ms
+    setTimeout(triggerTranslation, 500);
     return;
   }
 
-  // Si el idioma detectado no está entre los permitidos, se traduce a inglés por defecto.
-  if (!allowedLanguages.includes(userLang)) {
-    userLang = "en";
-  }
-
-  function doTranslate() {
-    const googleCombo = document.querySelector('.goog-te-combo');
-    if (googleCombo) {
-      googleCombo.value = userLang;
-      googleCombo.dispatchEvent(new Event('change', { bubbles: true }));
-    } else {
-      // Si el elemento no está disponible, reintenta en 500ms
-      setTimeout(doTranslate, 500);
+  // Si el combo de Google Translate está disponible, realiza la traducción
+  const savedLang = localStorage.getItem("selectedLanguage");
+  if (savedLang) {
+    googleCombo.value = savedLang;
+  } else {
+    // Detecta el idioma del usuario
+    let userLang = navigator.language.slice(0, 2);
+    const allowedLanguages = ["es", "en", "fr", "pt", "de"];
+    if (!allowedLanguages.includes(userLang)) {
+      userLang = "en"; // Traducir a inglés por defecto
     }
+    googleCombo.value = userLang;
   }
 
-  doTranslate();
+  // Simula el cambio de valor
+  googleCombo.dispatchEvent(new Event('change', { bubbles: true }));
 }
 
 document.addEventListener("DOMContentLoaded", function () {
