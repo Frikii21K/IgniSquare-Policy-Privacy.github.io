@@ -4,12 +4,11 @@ body {
     background-color: #f4f4f4;
     color: #333;
     margin: 0;
-    padding: 0;
+    padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    padding: 20px;
 }
 
 /* Contenedor principal */
@@ -73,18 +72,84 @@ a:hover {
     text-decoration: underline;
 }
 
-/* ----- RESPONSIVE DESIGN ----- */
+/* Custom Widget de Traducción */
+#custom_translate_wrapper {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 9999;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 4px 8px;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+    font-family: 'Roboto', sans-serif;
+}
+
+#custom_translate_wrapper::after {
+    content: '▼';
+    font-size: 10px;
+    color: #333;
+    margin-left: 5px;
+}
+
+#custom_translate {
+    background: #fff;
+    border: none;
+    font-size: 14px;
+    color: #333;
+    outline: none;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/* Ocultar el widget original de Google Translate desplazándolo fuera de la pantalla */
+#google_translate_element {
+    position: absolute;
+    top: 0;
+    left: -9999px;
+}
+
+ 
+
+/* Oculta el frame de la barra de Google Translate */
+.goog-te-banner-frame.skiptranslate,
+.goog-te-banner-frame,
+.goog-te-menu-frame,
+.goog-te-menu-frame.skiptranslate,
+.goog-te-balloon-frame,
+#goog-gt-tt,
+.goog-te-gadget-icon {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+/* Evita que se desplace el contenido */
+body {
+  top: 0px !important;
+  position: static !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Si Google inyecta algo en el body directo */
+body > .skiptranslate {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+/* RESPONSIVE DESIGN */
 
 /* Tablets */
 @media screen and (max-width: 768px) {
     .policy-container {
         padding: 16px;
     }
-
     .policy-title {
         font-size: 22px;
     }
-
     .policy-section-title {
         font-size: 18px;
     }
@@ -97,7 +162,6 @@ a:hover {
         padding: 12px;
         border-radius: 0;
     }
-
     .policy-title {
         font-size: 20px;
     }
@@ -112,3 +176,5 @@ a:hover {
         max-width: 100%;
     }
 }
+
+

@@ -10,11 +10,23 @@
   <!-- Fuente Material Design -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap">
   <link rel="stylesheet" href="style.css">
-  
-  <!-- Carga diferida de JS para mejor rendimiento -->
-  <script defer src="script.js"></script>
 </head>
 <body>
+  <!-- Contenedor del widget de Google Translate, ocultado fuera de pantalla -->
+  <div id="google_translate_element"></div>
+  
+  <!-- Custom Widget de Traducción -->
+  <div id="custom_translate_wrapper">
+    <select id="custom_translate">
+      <option value="">Idioma</option>
+      <option value="es">Español</option>
+      <option value="en">Inglés</option>
+      <option value="fr">Francés</option>
+      <option value="pt">Portugués</option>
+      <option value="de">Alemán</option>
+    </select>    
+  </div>
+  
   <main class="policy-container">
     <h1 class="policy-title">Política de Privacidad</h1>
     <p class="policy-text"><strong>Última actualización:</strong> [Fecha]</p>
@@ -93,5 +105,10 @@
       </p>
     </section>
   </main>
+  
+  <!-- Primero nuestro script personalizado -->
+  <script src="script.js"></script>
+  <!-- Luego el script de Google Translate, que llamará a googleTranslateElementInit -->
+  <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
