@@ -29,79 +29,252 @@
 
   <main class="policy-container">
     <h1 class="policy-title">Política de Privacidad</h1>
-    <p class="policy-text"><strong>Última actualización:</strong> [Fecha]</p>
+    <p class="policy-text"><strong>Última actualización:</strong> 24/03/2025</p>
     <p class="policy-text">
-      Esta política describe cómo <strong>[Nombre de la App]</strong> recopila, usa y protege su información cuando usa nuestra aplicación.
+      En StepVital, operado por IgniSquare, respetamos y protegemos la privacidad de nuestros usuarios. IgniSquare es un nombre comercial utilizado para ofrecer servicios tecnológicos y desarrollar aplicaciones móviles. Cumplimos con normativas internacionales, como el GDPR en la Unión Europea y la CCPA en California, así como con la legislación local de la República Dominicana. Esta política describe de manera clara y transparente cómo recopilamos, usamos, almacenamos y protegemos la información personal y de actividad que nos proporcionas.
     </p>
 
     <section>
       <h2 class="policy-section-title">1. Información que Recopilamos</h2>
-      <p class="policy-text">Podemos recopilar los siguientes tipos de información cuando usa nuestra aplicación:</p>
-      <ul class="policy-list">
-        <li>Información personal (nombre, correo electrónico, número de teléfono, etc.).</li>
-        <li>Datos de uso (interacciones dentro de la aplicación, preferencias, etc.).</li>
-        <li>Información del dispositivo (modelo, sistema operativo, identificador único).</li>
-        <li>Ubicación (si el usuario lo permite).</li>
-      </ul>
+      <section>
+        <p class="policy-text"><strong>1.1. Datos de Actividad Física</strong></p>
+        <ul class="policy-list">
+          <li>
+            <strong>Recopilación en tiempo real:</strong>
+            StepVital registra datos como el número de pasos, distancia recorrida, calorías quemadas y duración de la actividad.
+            <ul class="policy-list">
+              <li>
+                <strong>Modalidad de captura:</strong> Estos datos se recogen cuando la app está en uso y, si el usuario lo permite, también se capturan en segundo plano para un seguimiento continuo.
+              </li>
+              <li>
+                <strong>Almacenamiento:</strong> Se sincronizan localmente (mediante SQLite) y en la nube utilizando Firebase.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <p class="policy-text"><strong>1.2. Información de Perfil y Configuración</strong></p>
+        <p class="policy-text">
+          Durante el proceso de pre-registro y personalización, puedes proporcionar datos como género, altura, peso, edad y nivel de actividad física. Esta información es opcional y se utiliza exclusivamente para ofrecerte estadísticas, análisis comparativos y una experiencia personalizada.
+        </p>
+      </section>
+      <section>
+        <p class="policy-text"><strong>1.3. Datos de Uso y Rendimiento</strong></p>
+        <p class="policy-text">
+          Recopilamos información operativa, como interacciones (clics, vistas de pantalla) y métricas de rendimiento, para optimizar la experiencia del usuario y el funcionamiento de la aplicación. Utilizamos herramientas como Firebase Analytics, Crashlytics y FirebasePerformance para monitorear errores, rendimiento y estadísticas.
+        </p>
+      </section>
+      <section>
+        <p class="policy-text"><strong>1.4. Información de Autenticación</strong></p>
+        <p class="policy-text">
+          Utilizamos Firebase Authentication para gestionar el registro e inicio de sesión mediante correo y contraseña. La información sensible, como las contraseñas, se maneja de forma segura en la nube y no se almacena localmente.
+        </p>
+      </section>
+      <section>
+        <p class="policy-text"><strong>1.5. Permisos del Dispositivo</strong></p>
+        <p class="policy-text">
+          Para el correcto funcionamiento de StepVital, solicitamos los siguientes permisos, justificando su uso de manera explícita:
+        </p>
+        <ul class="policy-list">
+          <li>
+            <strong>Permiso de Actividad Física (Reconocimiento de actividad):</strong>
+            <ul class="policy-list">
+              <li>
+                <strong>Uso:</strong> Es necesario para capturar y registrar los datos de pasos y actividad en tiempo real.
+              </li>
+              <li>
+                <strong>Beneficio:</strong> Permite un seguimiento preciso de tu actividad diaria.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Permiso de Acceso a Medios:</strong>
+            <ul class="policy-list">
+              <li>
+                <strong>Uso:</strong> Se utiliza para almacenar datos relacionados con tu actividad (por ejemplo, capturas de pantalla para compartir logros).
+              </li>
+              <li>
+                <strong>Beneficio:</strong> Facilita el guardado y acceso a tus registros sin modificar el contenido personal de tu dispositivo.
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <p class="policy-text">
+          <strong>Nota:</strong>
+        </p>
+        <ul class="policy-list">
+          <li>Actualmente, StepVital no utiliza permisos de ubicación ni se integra con Google Fit.</li>
+          <li>Tampoco hace uso de cookies u otras tecnologías de rastreo.</li>
+        </ul>
+      </section>
     </section>
 
     <section>
-      <h2 class="policy-section-title">2. Cómo Usamos su Información</h2>
-      <ul class="policy-list">
-        <li>Proporcionar, operar y mejorar la aplicación.</li>
-        <li>Personalizar su experiencia.</li>
-        <li>Enviar notificaciones relevantes (si el usuario lo permite).</li>
-        <li>Cumplir con requisitos legales y de seguridad.</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2 class="policy-section-title">3. Compartición de Datos</h2>
-      <p class="policy-text">No compartimos su información personal, salvo en los siguientes casos:</p>
-      <ul class="policy-list">
-        <li>Con proveedores de servicios que nos ayudan a operar la aplicación.</li>
-        <li>Cuando sea requerido por ley.</li>
-        <li>En caso de fusión, adquisición o venta de activos.</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2 class="policy-section-title">4. Seguridad de los Datos</h2>
+      <h2 class="policy-section-title">2. Uso de la Información</h2>
       <p class="policy-text">
-        Implementamos medidas de seguridad técnicas y organizativas para proteger sus datos contra accesos no autorizados, alteraciones y pérdida.
+        La información que recopilamos se utiliza para:
+      </p>
+      <ul class="policy-list">
+        <li>
+          <strong>Personalización y seguimiento:</strong> Ofrecerte un seguimiento detallado de tu actividad física, permitiendo visualizar estadísticas, análisis comparativos y registros históricos.
+        </li>
+        <li>
+          <strong>Optimización y mejora:</strong> Analizar el uso de la app para mejorar sus funcionalidades y corregir errores, mediante el estudio de interacciones y datos de rendimiento.
+        </li>
+        <li>
+          <strong>Seguridad y autenticación:</strong> Gestionar de forma segura el acceso a tu cuenta y la sincronización de datos en la nube.
+        </li>
+        <li>
+          <strong>Monetización y servicios premium:</strong>
+          <ul class="policy-list">
+            <li>
+              <strong>Google AdMob:</strong> StepVital utiliza Google AdMob para mostrar anuncios dentro de la aplicación. AdMob puede recopilar información sobre tu dispositivo y comportamiento de uso para ofrecer anuncios personalizados. Esta publicidad se podrá desactivar mediante las suscripciones, las cuales incluyen pagos mensuales o anuales. Para más detalles, consulta la <a href="https://policies.google.com/privacy" target="_blank">Política de Privacidad de AdMob</a>.
+            </li>
+            <li>
+              <strong>Google Play Billing:</strong> Se utiliza para gestionar las suscripciones dentro de la app, las cuales permiten desactivar anuncios, acceder a artículos de salud premium, desbloquear estilos y otras funciones exclusivas.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Notificaciones:</strong> Enviar notificaciones y recordatorios personalizados (por ejemplo, felicitaciones o alertas sobre logros) cuando la app esté en uso o cuando se autorice su ejecución en segundo plano.
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 class="policy-section-title">3. Compartición y Transferencia de Datos</h2>
+      <section>
+        <p class="policy-text"><strong>3.1. Con Terceros de Confianza</strong></p>
+        <ul class="policy-list">
+          <li>
+            <strong>Proveedores de Servicios:</strong> Compartimos información únicamente con proveedores esenciales para el funcionamiento del servicio, tales como:
+            <ul class="policy-list">
+              <li>
+                <strong>Firebase (Authentication, Firestore, Analytics, Crashlytics, FirebasePerformance):</strong> Se utiliza para la gestión de usuarios, sincronización en la nube y monitoreo del rendimiento.
+              </li>
+              <li>
+                <strong>Google AdMob y Google Play Billing:</strong> Para la monetización y gestión de suscripciones. Consulta la <a href="https://policies.google.com/privacy" target="_blank">Política de Privacidad de Google</a> para más detalles.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <p class="policy-text"><strong>3.2. Excepciones Legales</strong></p>
+        <ul class="policy-list">
+          <li>
+            Podemos divulgar tus datos en cumplimiento de obligaciones legales o cuando sea necesario para proteger derechos, la seguridad y el funcionamiento de la app.
+          </li>
+          <li>
+            En ningún caso se venderán tus datos personales a terceros.
+          </li>
+        </ul>
+      </section>
+      <section>
+        <p class="policy-text"><strong>3.3. Transferencia Internacional de Datos</strong></p>
+        <ul class="policy-list">
+          <li>
+            <strong>Procesamiento en Servidores Extranjeros:</strong> Los datos almacenados en Firebase pueden ser procesados en servidores ubicados en Estados Unidos y en otras regiones donde Google opera.
+          </li>
+          <li>
+            <strong>Medidas de Protección:</strong> Google aplica medidas de seguridad y protección adecuadas, cumpliendo con estándares internacionales como el GDPR, para garantizar que tus datos estén protegidos durante la transferencia y el procesamiento.
+          </li>
+          <li>
+            Al utilizar StepVital, aceptas que tus datos sean transferidos a estas jurisdicciones.
+          </li>
+        </ul>
+      </section>
+    </section>
+
+    <section>
+      <h2 class="policy-section-title">4. Retención y Seguridad de la Información</h2>
+      <section>
+        <p class="policy-text"><strong>4.1. Retención</strong></p>
+        <ul class="policy-list">
+          <li>
+            <strong>Datos de Actividad:</strong> Se almacenan mientras mantengas tu cuenta activa.
+          </li>
+          <li>
+            <strong>Eliminación de Datos:</strong> Los usuarios pueden eliminar su cuenta y los datos asociados de forma permanente. Esta función se encuentra implementada en el modal de “Cerrar sesión”: al seleccionarla, se muestra un mensaje informativo y, al pulsarlo, se abre un segundo modal con una cuenta regresiva que permite al usuario confirmar o cancelar la eliminación. Una vez confirmada, toda la información asociada se eliminará de forma permanente en un plazo máximo de 48 horas.
+          </li>
+          <li>
+            <strong>Alternativa:</strong> En caso de requerir asistencia, los usuarios pueden solicitar la eliminación manual de sus datos escribiéndonos a ignisquare@gmail.com.
+          </li>
+        </ul>
+      </section>
+      <section>
+        <p class="policy-text"><strong>4.2. Medidas de Seguridad</strong></p>
+        <p class="policy-text">
+          Implementamos medidas técnicas, administrativas y físicas para proteger tus datos, incluyendo el uso de protocolos HTTPS y, en lo posible, cifrado AES. Aunque adoptamos estándares de seguridad avanzados, ningún sistema es 100% infalible.
+        </p>
+      </section>
+    </section>
+
+    <section>
+      <h2 class="policy-section-title">5. Base Legal y Derechos del Usuario</h2>
+      <section>
+        <p class="policy-text"><strong>5.1. Base Legal (Para Usuarios en la UE y Otras Jurisdicciones)</strong></p>
+        <ul class="policy-list">
+          <li>
+            <strong>Consentimiento:</strong> Utilizamos tus datos únicamente cuando nos das tu consentimiento explícito.
+          </li>
+          <li>
+            <strong>Ejecución de un Contrato:</strong> La provisión de tus datos es necesaria para la creación y mantenimiento de tu cuenta, así como para ofrecerte nuestros servicios.
+          </li>
+          <li>
+            <strong>Obligaciones Legales y Legítimos Intereses:</strong> Tratamos tus datos para cumplir con obligaciones legales y para proteger los intereses de StepVital y sus usuarios.
+          </li>
+        </ul>
+      </section>
+      <section>
+        <p class="policy-text"><strong>5.2. Derechos del Usuario</strong></p>
+        <ul class="policy-list">
+          <li>Tienes derecho a solicitar el acceso, corrección o eliminación de tus datos personales.</li>
+          <li>Retirar tu consentimiento para el tratamiento de tus datos.</li>
+          <li>Recibir información detallada sobre el uso y finalidad de tus datos.</li>
+          <li>Solicitar la portabilidad de tus datos.</li>
+        </ul>
+        <p class="policy-text">
+          Para ejercer estos derechos o para cualquier consulta relacionada con tu privacidad, contáctanos a: <br>
+          <strong>Email:</strong> ignisquare@gmail.com
+        </p>
+      </section>
+    </section>
+
+    <section>
+      <h2 class="policy-section-title">6. Datos de Menores</h2>
+      <ul class="policy-list">
+        <li>
+          <strong>Público Dirigido:</strong> StepVital está dirigida a adolescentes a partir de los 16 años, adultos y personas mayores que deseen llevar una vida saludable y activa.
+        </li>
+        <li>
+          <strong>Protección de Menores:</strong> No está dirigida a niños menores de 13 años y no recopilamos intencionadamente datos de menores. Si eres padre o tutor y crees que hemos recopilado información de un menor, contáctanos para proceder a la eliminación de esos datos.
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 class="policy-section-title">7. Uso de Cookies y Tecnologías de Rastreo</h2>
+      <p class="policy-text">
+        StepVital no utiliza cookies ni otras tecnologías de rastreo en su app.
       </p>
     </section>
 
     <section>
-      <h2 class="policy-section-title">5. Derechos del Usuario</h2>
+      <h2 class="policy-section-title">8. Cambios en la Política de Privacidad</h2>
       <ul class="policy-list">
-        <li>Acceder, corregir o eliminar su información personal.</li>
-        <li>Revocar su consentimiento para el uso de datos en cualquier momento.</li>
-        <li>Solicitar una copia de los datos recopilados.</li>
+        <li>Nos reservamos el derecho a actualizar esta política de privacidad ocasionalmente.</li>
+        <li>Te notificaremos sobre cambios significativos mediante avisos en la app y actualizaremos la “Última actualización” en este documento.</li>
+        <li>Te recomendamos revisar esta política periódicamente.</li>
       </ul>
     </section>
 
     <section>
-      <h2 class="policy-section-title">6. Permisos Solicitados</h2>
-      <ul class="policy-list">
-        <li>Cámara o galería (para subir imágenes, si aplica).</li>
-        <li>Ubicación (para mejorar la experiencia, si aplica).</li>
-        <li>Almacenamiento (para guardar datos en su dispositivo).</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2 class="policy-section-title">7. Cambios en esta Política</h2>
+      <h2 class="policy-section-title">9. Contacto</h2>
       <p class="policy-text">
-        Podemos actualizar esta política de privacidad en cualquier momento. Notificaremos a los usuarios sobre cambios importantes mediante la aplicación o correo electrónico.
-      </p>
-    </section>
-
-    <section>
-      <h2 class="policy-section-title">8. Contacto</h2>
-      <p class="policy-text">Si tiene preguntas, puede contactarnos en:</p>
-      <p class="policy-text">
-        📧 <a href="mailto:privacidad@appfitness.com">privacidad@appfitness.com</a>
+        Si tienes dudas, comentarios o solicitudes relacionadas con tu privacidad, por favor contáctanos a: <br>
+        <strong>Email:</strong> ignisquare@gmail.com
       </p>
     </section>
   </main>
