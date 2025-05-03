@@ -29,7 +29,7 @@
 
   <main class="policy-container">
     <h1 class="policy-title">Política de Privacidad</h1>
-    <p class="policy-text"><strong>Última actualización:</strong> 24/03/2025</p>
+    <p class="policy-text"><strong>Última actualización:</strong> 02/05/2025</p>
     <p class="policy-text">
       En StepVital, operado por IgniSquare, respetamos y protegemos la privacidad de nuestros usuarios. IgniSquare es un nombre comercial utilizado para ofrecer servicios tecnológicos y desarrollar aplicaciones móviles. Cumplimos con normativas internacionales, como el GDPR en la Unión Europea y la CCPA en California, así como con la legislación local de la República Dominicana. Esta política describe de manera clara y transparente cómo recopilamos, usamos, almacenamos y protegemos la información personal y de actividad que nos proporcionas.
     </p>
@@ -68,8 +68,8 @@
       <section>
         <p class="policy-text"><strong>1.4. Información de Autenticación</strong></p>
         <p class="policy-text">
-          Utilizamos Firebase Authentication para gestionar el registro e inicio de sesión mediante correo y contraseña. La información sensible, como las contraseñas, se maneja de forma segura en la nube y no se almacena localmente.
-        </p>
+          Utilizamos Firebase Authentication para gestionar el inicio de sesión únicamente mediante Google Sign‑In. No existe creación manual de cuenta ni almacenamiento local de contraseñas. Al acceder, se autentica tu identidad vía Google y se sincroniza tu perfil automáticamente.
+        </p>        
       </section>
       <section>
         <p class="policy-text"><strong>1.5. Permisos del Dispositivo</strong></p>
@@ -107,6 +107,14 @@
           <li>Actualmente, StepVital no utiliza permisos de ubicación ni se integra con Google Fit.</li>
           <li>Tampoco hace uso de cookies u otras tecnologías de rastreo.</li>
         </ul>
+      </section>
+    </section>
+
+      <section>
+        <p class="policy-text"><strong>1.6. Comprobación de Conectividad</strong></p>
+        <p class="policy-text">
+Para todas las funciones que requieren Internet (inicio de sesión, lectura de artículos de salud, backups, compras, restauración de compras, cerrar sesión, eliminar cuenta, adquisición de plan premium y consulta de políticas), StepVital utiliza NetInfo para detectar tu estado de red. Si no hay conexión, se mostrará un aviso y la acción quedará deshabilitada hasta que te reconectes.
+        </p>
       </section>
     </section>
 
@@ -206,11 +214,19 @@
       <section>
         <p class="policy-text"><strong>4.2. Medidas de Seguridad</strong></p>
         <p class="policy-text">
-          Implementamos medidas técnicas, administrativas y físicas para proteger tus datos, incluyendo el uso de protocolos HTTPS y, en lo posible, cifrado AES. Aunque adoptamos estándares de seguridad avanzados, ningún sistema es 100% infalible.
-        </p>
+        Implementamos medidas técnicas, administrativas y físicas para proteger tus datos, incluyendo el uso de protocolos HTTPS. Aunque adoptamos estándares de seguridad avanzados, ningún sistema es 100 % infalible.</p>
       </section>
     </section>
 
+      </section>
+      <section>
+        <p class="policy-text"><strong>4.3. Copia de Seguridad y Restauración Automática</strong></p>
+        <p class="policy-text">
+      Al iniciar sesión con Google Sign‑In, se crea automáticamente un respaldo de tu base de datos en la nube (Firebase). Si existe un backup previo, se restaura de inmediato toda tu información. Este proceso se ejecuta cada 12 horas de forma automática y también puede iniciarse manualmente desde Ajustes > Backup.
+      </p>
+      </section>
+    </section>
+    
     <section>
       <h2 class="policy-section-title">5. Base Legal y Derechos del Usuario</h2>
       <section>
