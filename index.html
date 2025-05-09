@@ -118,6 +118,19 @@ Para todas las funciones que requieren Internet (inicio de sesión, lectura de a
       </section>
     </section>
 
+
+
+<section>
+  <p class="policy-text"><strong>1.7. Identificador Único del Dispositivo</strong></p>
+  <p class="policy-text">
+    Para gestionar de forma segura las sesiones de usuario y prevenir accesos simultáneos, StepVital recopila un identificador único de tu dispositivo (deviceId).  
+    <strong>Uso:</strong> Asociar tu cuenta a un solo dispositivo activo y evitar inconsistencias en la restauración de datos.<br>
+    <strong>Almacenamiento:</strong> Este valor se guarda únicamente en Firestore en la colección <code>sessions/{userId}</code> y no se comparte con terceros.  
+    <strong>Retención:</strong> Se elimina automáticamente cuando cierras sesión.  
+  </p>
+</section>
+
+    
     <section>
       <h2 class="policy-section-title">2. Uso de la Información</h2>
       <p class="policy-text">
