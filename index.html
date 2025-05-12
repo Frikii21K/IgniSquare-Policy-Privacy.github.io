@@ -35,54 +35,61 @@
     </p>
 
 
-    <section>
+  <section>
   <h2 class="policy-section-title">Data Safety</h2>
   <p class="policy-text">
     En StepVital detallamos a continuación qué datos recogemos, con qué finalidad, con quién los compartimos y cómo los protegemos:
   </p>
-      <div class="policy-table-wrapper">
-  <table class="policy-table">
-    <thead>
-      <tr>
-        <th>Categoría de datos</th>
-        <th>Uso</th>
-        <th>Compartido con</th>
-        <th>Cifrado tránsito / reposo</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Datos de actividad física<br/>(pasos, distancia, calorías)</td>
-        <td>Funcional (seguimiento en tiempo real)</td>
-        <td>Firebase</td>
-        <td>Sí / Sí</td>
-      </tr>
-      <tr>
-        <td>Información de perfil<br/>(género, altura, peso, edad)</td>
-        <td>Funcional / Personalización</td>
-        <td>Firebase</td>
-        <td>Sí / Sí</td>
-      </tr>
-      <tr>
-        <td>Datos de uso y rendimiento<br/>(clics, vistas, errores)</td>
-        <td>Análisis y mejora de la app</td>
-        <td>Firebase Analytics, Crashlytics, Performance</td>
-        <td>Sí / Sí</td>
-      </tr>
-      <tr>
-        <td>Identificador único de dispositivo (deviceId)</td>
-        <td>Seguridad de sesión</td>
-        <td>Firebase Firestore</td>
-        <td>Sí / Sí</td>
-      </tr>
-    </tbody>
-  </table>
-        </div>
-      <p class="policy-text">
-  Para eliminar tus datos desde la app: ve a Ajustes → Ajuste de privacidad → Eliminar datos<br>
-  O bien, toca el botón de los “⋮” junto a tu cuenta (correo) en Ajustes, selecciona “Eliminar cuenta” y espera 10 segundos para confirmar. Todos tus datos locales y en la nube se borrarán.
-</p>
+  <div class="policy-table-wrapper">
+    <table class="policy-table">
+      <thead>
+        <tr>
+          <th>Categoría de datos</th>
+          <th>Uso</th>
+          <th>Compartido con</th>
+          <th>Cifrado tránsito / reposo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Datos de actividad física<br>(pasos, distancia, calorías)</td>
+          <td>Funcional (seguimiento en tiempo real)</td>
+          <td>Firebase</td>
+          <td>Sí / Sí</td>
+        </tr>
+        <tr>
+          <td>Información de perfil<br>(género, altura, peso, edad)</td>
+          <td>Funcional / Personalización</td>
+          <td>Firebase</td>
+          <td>Sí / Sí</td>
+        </tr>
+        <tr>
+          <td>Datos de uso y rendimiento<br>(clics, vistas, errores)</td>
+          <td>Análisis y mejora de la app</td>
+          <td>Firebase Analytics, Crashlytics, Performance</td>
+          <td>Sí / Sí</td>
+        </tr>
+        <tr>
+          <td>Identificador único de dispositivo (deviceId)</td>
+          <td>Seguridad de sesión</td>
+          <td>Firebase Firestore</td>
+          <td>Sí / Sí</td>
+        </tr>
+         <tr>
+          <td>Advertising ID</td>
+          <td>Consentimiento para anuncios</td>
+          <td>No compartido<br>(gestión local)</td>
+          <td>Sí / Sí</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="policy-text">
+    Para eliminar tus datos desde la app: ve a Ajustes → Ajuste de privacidad → Eliminar datos<br>
+    O bien, toca el botón de los “⋮” junto a tu cuenta (correo) en Ajustes, selecciona “Eliminar cuenta” y espera 10 segundos para confirmar. Todos tus datos locales y en la nube se borrarán.
+  </p>
 </section>
+
 
     
 
@@ -165,7 +172,7 @@
       <section>
         <p class="policy-text"><strong>1.6. Comprobación de Conectividad</strong></p>
         <p class="policy-text">
-Para todas las funciones que requieren Internet (inicio de sesión, lectura de artículos de salud, backups, compras, restauración de compras, cerrar sesión, eliminar cuenta, adquisición de plan premium y consulta de políticas), StepVital utiliza NetInfo para detectar tu estado de red. Si no hay conexión, se mostrará un aviso y la acción quedará deshabilitada hasta que te reconectes.
+Para todas las funciones que requieren Internet (inicio de sesión, lectura de artículos de salud, backups, compras, restauración de compras, cerrar sesión, eliminar cuenta, adquisición de plan premium y consulta de políticas entre otras opciones), StepVital utiliza NetInfo para detectar tu estado de red. Si no hay conexión, se mostrará un aviso y la acción quedará deshabilitada hasta que te reconectes.
         </p>
       </section>
     </section>
@@ -179,6 +186,21 @@ Para todas las funciones que requieren Internet (inicio de sesión, lectura de a
     <strong>Uso:</strong> Asociar tu cuenta a un solo dispositivo activo y evitar inconsistencias en la restauración de datos.<br>
     <strong>Almacenamiento:</strong> Este valor se guarda únicamente en Firestore en la colección <code>sessions/{userId}</code> y no se comparte con terceros.  
     <strong>Retención:</strong> Se elimina automáticamente cuando cierras sesión.  
+  </p>
+</section>
+
+    <section>
+  <h2 class="policy-section-title">1.8. Detección de Región e Idioma</h2>
+  <p class="policy-text">
+    StepVital utiliza la librería <code>react-native-localize</code> para detectar automáticamente tu idioma y región al iniciar la aplicación.  
+    <ul class="policy-list">
+      <li>
+        <strong>Idioma:</strong> Preseleccionamos la interfaz en el idioma de tu dispositivo.
+      </li>
+      <li>
+        <strong>Región:</strong> Activamos las opciones de consentimiento y cumplimiento (GDPR/CCPA) en función de tu ubicación geográfica.
+      </li>
+    </ul>
   </p>
 </section>
 
@@ -222,39 +244,51 @@ Para todas las funciones que requieren Internet (inicio de sesión, lectura de a
 <section>
   <h2 class="policy-section-title">2.1. Anuncios Personalizados</h2>
   <p class="policy-text">
-    StepVital puede mostrar anuncios adaptados a tus intereses, pero <strong>solo tras tu consentimiento explícito</strong>.  
-    Este consentimiento se solicita <strong>la primera vez que se muestra un anuncio de AdMob</strong> tras la actualización
+    StepVital puede mostrar anuncios adaptados a tus intereses, pero <strong>solo tras tu consentimiento explícito</strong>.
+    Este consentimiento se solicita <strong>la primera vez que se muestra un anuncio de AdMob</strong> tras la actualización.
   </p>
   <ul class="policy-list">
     <li>
       <strong>Datos utilizados:</strong> Interacciones en la app y datos demográficos agregados.
     </li>
     <li>
-      <strong>Revocación del consentimiento:</strong> Si deseas dejar de ver anuncios personalizados en cualquier momento, deberás ir a los ajustes de Google Ads en tu dispositivo:
+      <strong>Revocación del consentimiento:</strong> Puedes revocar el consentimiento en:
       <ul class="policy-list">
-        <li>Ajustes del sistema → Google → Anuncios → <em>Eliminar el ID de publicidad</em>.</li>
+        <li>La propia app: Ajustes → Ajuste de privacidad → Gestionar consentimiento.</li>
+        <li>Configuración del dispositivo: Ajustes del sistema → Google → Anuncios → <em>Eliminar el ID de publicidad</em>.</li>
       </ul>
     </li>
     <li>
       <strong>Socios publicitarios:</strong> Consulta la lista completa en la sección “Socios de anuncios” de la política de AdMob.
     </li>
   </ul>
-
   <p class="policy-text">
-  El consentimiento se gestiona mediante la User Messaging Platform (UMP) de Google, que registra tu elección y la mantiene activa durante 24 meses. Puedes revisarlo o revocarlo en cualquier momento desde Ajustes → Ajuste de privacidad → Consentimiento.
-</p>
-  
+    El consentimiento se gestiona mediante la User Messaging Platform (UMP) de Google, que registra tu elección y la mantiene activa durante 24 meses. Puedes revisarlo, actualizarlo o revocarlo en cualquier momento desde Ajustes → Ajuste de privacidad → Consentimiento.
+  </p>
 </section>
+
+ 
 
 <section>
   <h2 class="policy-section-title">2.2. Eliminación del Advertising ID</h2>
   <p class="policy-text">
-    Cuando optas por <strong>no consentir anuncios personalizados</strong>, StepVital deshabilita el uso de tu Advertising ID de forma inmediata.  
+    Cuando optas por <strong>no consentir anuncios personalizados</strong>, StepVital deshabilita el uso de tu Advertising ID de forma inmediata y descarta cualquier identificador local.
   </p>
   <ul class="policy-list">
-    <li><strong>Qué sucede:</strong> Tu Advertising ID se descarta localmente y no se envía a ningún servidor.</li>
-    <li><strong>Para eliminar tu ID en cualquier momento:</strong> Accede a Ajustes del sistema → Google → Anuncios → <em>Eliminar el ID de publicidad</em>.</li>
-    <li><strong>Reactivación:</strong> Si vuelves a consentir anuncios personalizados en la app, se generará un nuevo Advertising ID no vinculado al anterior.</li>
+    <li>
+      <strong>Qué sucede:</strong> Tu Advertising ID se descarta localmente y no se envía a ningún servidor.
+    </li>
+    <li>
+      <strong>Para eliminar tu ID desde el sistema:</strong><br>
+      Ajustes del sistema → Google → Anuncios → <em>Eliminar el ID de publicidad</em>.
+    </li>
+    <li>
+      <strong>Para eliminar tu ID desde la app:</strong><br>
+      Ajustes → Ajuste de privacidad → <em>Eliminar Advertising ID</em>.
+    </li>
+    <li>
+      <strong>Reactivación:</strong> Si vuelves a consentir anuncios personalizados en la app, se generará un nuevo Advertising ID no vinculado al anterior.
+    </li>
   </ul>
 </section>
 
