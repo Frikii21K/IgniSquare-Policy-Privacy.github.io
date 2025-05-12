@@ -143,6 +143,49 @@ body > .skiptranslate {
   visibility: hidden !important;
 }
 
+
+
+.policy-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  margin-bottom: 16px;
+}
+
+/* Tabla responsiva y full‐width */
+.policy-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px; /* asegura legibilidad en desktop */
+}
+
+/* Cabecera */
+.policy-table thead th {
+  background-color: #2980b9;
+  color: #fff;
+  font-weight: 600;
+  padding: 12px 8px;
+  text-align: left;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+/* Filas y celdas */
+.policy-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+.policy-table th,
+.policy-table td {
+  border: 1px solid #ddd;
+  padding: 10px 8px;
+  vertical-align: top;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+ 
+
+
 /* RESPONSIVE DESIGN */
 
 /* Tablets */
@@ -168,6 +211,11 @@ body > .skiptranslate {
     .policy-title {
         font-size: 20px;
     }
+      .policy-table thead th,
+  .policy-table td {
+    padding: 8px 6px;
+    font-size: 12px;
+  }
 }
 
 @media screen and (max-width: 480px) {
