@@ -31,97 +31,117 @@
     <h1 class="policy-title">Solicitud de Eliminación de Cuenta</h1>
     <p class="policy-text"><strong>Aplicación:</strong> StepVital (IgniSquare)</p>
     <p class="policy-text">
-      En StepVital, operado por IgniSquare, queremos respetar tus derechos de privacidad y darte control total sobre tu información. Si deseas eliminar tu cuenta y todos los datos asociados, por favor sigue los pasos descritos a continuación. Esta página explica:
+      En StepVital, operado por IgniSquare, respetamos tu derecho a la privacidad y te ofrecemos varias formas de eliminar tu cuenta y los datos asociados. A continuación, se detallan:
     </p>
 
     <section>
-      <h2 class="policy-section-title">1. ¿Qué se eliminará?</h2>
+      <h2 class="policy-section-title">1. Eliminación desde la app</h2>
+      <p class="policy-text">
+        Puedes borrar tu cuenta y todos tus datos directamente desde la aplicación siguiendo uno de estos dos métodos:
+      </p>
       <ul class="policy-list">
-        <li><strong>Perfil de usuario:</strong> Nombre, correo electrónico, foto de perfil y cualquier información personal que hayas proporcionado.</li>
-        <li><strong>Datos de actividad física:</strong> Historial completo de pasos, distancia, calorías y otros registros de entrenamiento almacenados en la nube.</li>
-        <li><strong>Configuración y preferencias:</strong> Ajustes personalizados, metas, recordatorios y cualquier configuración guardada en Firebase.</li>
-        <li><strong>Identificador único del dispositivo (deviceId):</strong> Sesiones activas y asociaciones de cuenta con tu dispositivo.</li>
+        <li>
+          <strong>Opción A:</strong>  
+          En la pantalla de “Cerrar sesión”, pulsa “Eliminar cuenta”.  
+          <ul class="policy-list">
+            <li>Se mostrará un mensaje:  
+              “Esto borrará su cuenta permanentemente, junto con todos sus datos locales y en la nube como: pasos, distancias recorridas, calorías quemadas, logros, etc.”  
+            </li>
+            <li>Se abrirá un segundo modal con una cuenta regresiva de 10 segundos antes de habilitar el botón de confirmación.</li>
+            <li>Presiona “Confirmar” para eliminar de forma inmediata e irreversible:
+              <ul class="policy-list">
+                <li>Tu cuenta en Firebase Authentication y Firestore.</li>
+                <li>Todos los backups en la nube (Firebase).</li>
+                <li>La base de datos local de la app.</li>
+                <li>Se restablecerá la aplicación a su estado inicial.</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Opción B:</strong>  
+          Desde la sección de Ajustes:
+          <ul class="policy-list">
+            <li>Ve a <em>Ajustes → Ajuste de privacidad → Eliminar datos</em>.</li>
+            <li>O toca el icono “⋮” junto a tu correo en Ajustes, selecciona “Eliminar cuenta” y espera 10 segundos para confirmar.</li>
+            <li>Al confirmar, se elimina de inmediato tu cuenta y todos los datos locales y en la nube (pasos, distancias, calorías, configuraciones, identificador de dispositivo, etc.).</li>
+          </ul>
+        </li>
       </ul>
       <p class="policy-text">
-        Todos estos datos se borrarán permanentemente de nuestros sistemas en un plazo máximo de <strong>30 días</strong> una vez que verifiquemos tu solicitud.
+        <strong>Nota:</strong>  
+        Estos procesos borran todo lo relacionado con tu cuenta en Firebase (autenticación, Firestore, respaldos) y también eliminan los datos almacenados localmente en tu dispositivo.
       </p>
     </section>
 
     <section>
-      <h2 class="policy-section-title">2. ¿Qué se conservará (si aplica)?</h2>
+      <h2 class="policy-section-title">2. Eliminación manual vía correo</h2>
+      <p class="policy-text">
+        Si por algún motivo no puedes usar la app para eliminar tu cuenta, o necesitas asistencia adicional, escríbenos a:
+      </p>
       <ul class="policy-list">
-        <li><strong>Datos anónimos de uso:</strong> Información agregada y no identificable para métricas globales de uso de la app (sin vincularlos a tu cuenta) se conserva hasta <strong>6 meses</strong> para mejorar el rendimiento y la estabilidad.</li>
-        <li><strong>Registros legales obligatorios:</strong> Datos mínimos que debamos retener para cumplir con normativas locales o internaciones (por ejemplo, para auditorías fiscales) se almacenarán durante el tiempo que la ley lo exija. </li>
+        <li><strong>Email de soporte y eliminación:</strong> <a href="mailto:ignisquare@gmail.com">ignisquare@gmail.com</a></li>
+        <li><strong>Asunto sugerido:</strong> “Eliminar mi cuenta StepVital”</li>
       </ul>
       <p class="policy-text">
-        Estos datos permanecen desvinculados de tu identidad y no pueden volver a asociarse contigo una vez que tu cuenta sea eliminada.
+        En el correo, indica lo siguiente:
+      </p>
+      <ul class="policy-list">
+        <li>La dirección de correo registrada en StepVital.</li>
+        <li>El identificador único de usuario (UID) si lo conoces (opcional, pero acelera el proceso).</li>
+        <li>Confirma que solicitas la eliminación total de tu cuenta y datos.</li>
+      </ul>
+      <p class="policy-text">
+        Recibirás un mensaje automático en un plazo de 48 horas laborables confirmando que tu solicitud ha sido recibida. Luego, en un máximo de 30 días, tu cuenta y todos los datos asociados se borrarán de nuestros sistemas.
       </p>
     </section>
 
     <section>
-      <h2 class="policy-section-title">3. Pasos para solicitar la eliminación</h2>
+      <h2 class="policy-section-title">3. ¿Qué datos se eliminarán?</h2>
       <p class="policy-text">
-        Para iniciar la eliminación de tu cuenta y datos asociados, realiza lo siguiente:
+        Cuando elimines tu cuenta, se borrarán de forma permanente:
       </p>
-      <ol class="policy-list">
-        <li>
-          Envía un correo electrónico a  
-          <a href="mailto:eliminar@ignisquare.app">eliminar@ignisquare.app</a> 
-          con el asunto: <em>“Eliminar mi cuenta StepVital”</em>.
-        </li>
-        <li>
-          En el cuerpo del mensaje, incluye:  
-          <ul class="policy-list">
-            <li>El nombre de usuario o dirección de correo registrada en StepVital.</li>
-            <li>El identificador único de usuario (UID) si lo conoces (opcional, pero ayuda a acelerar el proceso).</li>
-            <li>Una breve confirmación de tu solicitud de eliminación total de cuenta y datos.</li>
-          </ul>
-        </li>
-        <li>
-          Recibirás un correo de confirmación automático de parte de <strong>eliminar@ignisquare.app</strong> en un plazo de 48 horas laborables.  
-          <ul class="policy-list">
-            <li>Si no ves este correo en tu bandeja de entrada, revisa tu carpeta de spam.</li>
-          </ul>
-        </li>
-        <li>
-          Cuando confirmemos la verificación de tu cuenta, comenzaremos el proceso de eliminación definitivo.  
-          <ul class="policy-list">
-            <li>Te notificaremos de nuevo cuando tu cuenta y datos hayan sido completamente borrados (en un plazo máximo de 30 días desde la verificación).</li>
-          </ul>
-        </li>
-      </ol>
+      <ul class="policy-list">
+        <li><strong>Datos de actividad física:</strong> pasos, distancia recorrida, calorías quemadas y otros registros almacenados en la nube.</li>
+        <li><strong>Información de perfil:</strong> género, altura, peso, edad y cualquier otra configuración que hayas proporcionado.</li>
+        <li><strong>Datos de uso y rendimiento:</strong> clics, vistas de pantalla, métricas de uso, errores, etc., recopilados en Firebase Analytics y Crashlytics.</li>
+        <li><strong>Identificador único del dispositivo (deviceId):</strong> registros en la colección de sesiones en Firestore.</li>
+        <li><strong>Backups automáticos:</strong> todos los respaldos de tu base de datos en la nube (Firebase) se eliminarán.</li>
+        <li><strong>Base de datos local:</strong> todos los registros y configuraciones almacenados en SQLite se borrarán.</li>
+        <li><strong>Advertising ID:</strong> si estabas usando anuncios no personalizados, se eliminará el vínculo con tu ID publicitario.</li>
+      </ul>
     </section>
 
     <section>
-      <h2 class="policy-section-title">4. Contacto alternativo</h2>
+      <h2 class="policy-section-title">4. Retenciones y exclusiones</h2>
       <p class="policy-text">
-        Si tienes problemas enviando un correo a <code>eliminar@ignisquare.app</code>, también puedes contactarnos a:  
-        <ul class="policy-list">
-          <li><strong>Email de Soporte General:</strong> <a href="mailto:ignisquare@gmail.com">ignisquare@gmail.com</a></li>
-          <li><strong>Asunto sugerido:</strong> “Solicitud de eliminación de cuenta StepVital”</li>
-        </ul>
+        Tras la eliminación de tu cuenta:
       </p>
+      <ul class="policy-list">
+        <li><strong>Datos anónimos de uso:</strong> Algunas estadísticas agregadas y no identificables pueden conservarse hasta <strong>12 meses</strong> con fines analíticos y de mejora de la aplicación. Estos registros no están vinculados a tu identidad.</li>
+        <li><strong>Información legalmente obligatoria:</strong> Ciertos datos pueden retenerse el tiempo que exijan las leyes locales o internacionales (por ejemplo, por auditorías fiscales). Estos datos se almacenan de forma cifrada y no se utilizan para ofrecerte ningún servicio personalizado.</li>
+      </ul>
       <p class="policy-text">
-        Nos comprometemos a responder en un plazo máximo de <strong>5 días hábiles</strong> si utilizas este canal alternativo.
+        Una vez transcurrido el período de retención legal, estos registros anónimos también se eliminarán permanentemente.
       </p>
     </section>
 
     <section>
       <h2 class="policy-section-title">5. Confirmación y plazos</h2>
       <ul class="policy-list">
-        <li><strong>Notificación de recepción:</strong> Recibirás un correo automático en 48 horas laborables tras tu solicitud.</li>
-        <li><strong>Proceso de eliminación:</strong> Una vez verificada tu identidad y cuenta, iniciaremos la eliminación en un plazo máximo de 30 días.</li>
-        <li><strong>Confirmación final:</strong> Te enviaremos un correo cuando todos tus datos se hayan borrado completamente.</li>
+        <li><strong>Notificación de recepción:</strong> En 48 horas laborables recibirás un correo automático confirmando que tu solicitud fue recibida.</li>
+        <li><strong>Proceso de eliminación:</strong> En un máximo de 30 días tras la verificación de identidad y cuenta, procederemos a borrar todo lo descrito en el punto 3.</li>
+        <li><strong>Confirmación final:</strong> Te enviaremos un correo cuando todos tus datos hayan sido eliminados de nuestros sistemas.</li>
       </ul>
       <p class="policy-text">
-        Ten en cuenta que, si tu cuenta está asociada a alguna suscripción activa en Google Play, la eliminación de datos no cancela automáticamente la suscripción. Deberás gestionarla desde tu cuenta de Google Play en Ajustes → Suscripciones.
+        <strong>Importante:</strong> Si tu cuenta tenía una suscripción activa en Google Play, eliminar tus datos no cancelará automáticamente la suscripción. Debes gestionar la cancelación desde tu cuenta de Google Play: Ajustes → Suscripciones.
       </p>
     </section>
 
     <section>
       <h2 class="policy-section-title">6. Nombre de la app y desarrollador</h2>
       <p class="policy-text">
-        Esta solicitud de eliminación aplica a la aplicación <strong>StepVital</strong>, desarrollada por <strong>IgniSquare</strong>. Asegúrate de que tu petición mencione claramente “Eliminar mi cuenta StepVital” para que podamos procesarla correctamente.
+        Esta solicitud de eliminación aplica únicamente a la aplicación <strong>StepVital</strong>, desarrollada por <strong>IgniSquare</strong>. Asegúrate de que tu mensaje mencione “Eliminar mi cuenta StepVital” para que podamos procesarlo sin contratiempos.
       </p>
     </section>
   </main>
