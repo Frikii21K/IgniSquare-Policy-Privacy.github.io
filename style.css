@@ -1,3 +1,9 @@
+/* ===== Global ===== */
+/* Incluye el padding/border dentro del width total */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 /* Fuente Material Design */
 body {
     font-family: 'Roboto', sans-serif;
@@ -11,7 +17,7 @@ body {
     min-height: 100vh;
 }
 
-/* Contenedor principal */
+/* ===== Contenedor principal ===== */
 .policy-container {
     background-color: #ffffff;
     border-radius: 20px;
@@ -22,15 +28,14 @@ body {
     transition: all 0.3s ease-in-out;
 }
 
-/* Título principal */
+/* ===== Títulos y texto ===== */
 .policy-title {
     font-size: 26px;
     font-weight: bold;
     color: #2c3e50;
-     margin-bottom: 16px;
+    margin-bottom: 16px;
 }
 
-/* Secciones */
 .policy-section-title {
     font-size: 20px;
     font-weight: 700;
@@ -40,7 +45,6 @@ body {
     padding-left: 10px;
 }
 
-/* Texto */
 .policy-text {
     font-size: 16px;
     color: #555;
@@ -48,7 +52,6 @@ body {
     text-align: justify;
 }
 
-/* Lista */
 .policy-list {
     font-size: 16px;
     color: #444;
@@ -60,7 +63,6 @@ body {
     margin-bottom: 10px;
 }
 
-/* Enlaces */
 a {
     color: #007BFF;
     text-decoration: none;
@@ -71,7 +73,7 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Custom Widget de Traducción */
+/* ===== Widget de Traducción ===== */
 #custom_translate_wrapper {
     position: absolute;
     top: 15px;
@@ -86,7 +88,6 @@ a:hover {
     align-items: center;
     transition: all 0.3s ease-in-out;
 }
-
 
 #custom_translate_wrapper::after {
     font-size: 10px;
@@ -107,17 +108,13 @@ a:hover {
     transition: background 0.3s ease;
 }
 
-
-/* Ocultar el widget original de Google Translate desplazándolo fuera de la pantalla */
+/* Ocultar widget original de Google Translate */
 #google_translate_element {
     position: absolute;
     top: 0;
     left: -9999px;
 }
 
- 
-
-/* Oculta el frame de la barra de Google Translate */
 .goog-te-banner-frame.skiptranslate,
 .goog-te-banner-frame,
 .goog-te-menu-frame,
@@ -129,36 +126,25 @@ a:hover {
   visibility: hidden !important;
 }
 
-/* Evita que se desplace el contenido */
-body {
-  top: 0px !important;
-  position: static !important;
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-/* Si Google inyecta algo en el body directo */
 body > .skiptranslate {
   display: none !important;
   visibility: hidden !important;
 }
 
-
-
+/* ===== Tabla de Data Safety ===== */
 .policy-table-wrapper {
   width: 100%;
   overflow-x: auto;
   margin-bottom: 16px;
+  /* padding horizontal extra en móvil: se ajustará en media query */
 }
 
-/* Tabla responsiva y full‐width */
 .policy-table {
   width: 100%;
   border-collapse: collapse;
-  min-width: 600px; /* asegura legibilidad en desktop */
+  min-width: 600px; /* desktop: legible */
 }
 
-/* Cabecera */
 .policy-table thead th {
   background-color: #2980b9;
   color: #fff;
@@ -170,10 +156,10 @@ body > .skiptranslate {
   z-index: 1;
 }
 
-/* Filas y celdas */
 .policy-table tbody tr:nth-child(even) {
   background-color: #f9f9f9;
 }
+
 .policy-table th,
 .policy-table td {
   border: 1px solid #ddd;
@@ -183,10 +169,7 @@ body > .skiptranslate {
   line-height: 1.4;
 }
 
- 
-
-
-/* RESPONSIVE DESIGN */
+/* ===== Responsive Design ===== */
 
 /* Tablets */
 @media screen and (max-width: 768px) {
@@ -202,22 +185,21 @@ body > .skiptranslate {
 }
 
 /* Teléfonos */
- @media screen and (max-width: 480px) {
+@media screen and (max-width: 480px) {
     .policy-container {
-        width: 100%;
-        padding: 12px;      /* ya lo tienes */
-        border-radius: 0;
+        /* quitamos width:100% y usamos margen lateral */
+        width: auto;
+        margin: 0 12px;
+        padding: 12px;
+        border-radius: 8px;
     }
 
-    /* Ajuste para la tabla */
     .policy-table-wrapper {
-        /* crea un “acolchado” horizontal extra */
         padding: 0 12px;
     }
 
     .policy-table {
-        /* permite que la tabla ocupe como máximo el 100% del ancho disponible */
-        min-width: auto;  /* elimina el min-width de 600px */
+        min-width: auto;
         width: 100%;
     }
 
@@ -226,9 +208,11 @@ body > .skiptranslate {
         padding: 8px 6px;
         font-size: 12px;
     }
-}
 
-@media screen and (max-width: 480px) {
+    .policy-title {
+        font-size: 20px;
+    }
+    
     #custom_translate_wrapper {
         padding: 8px;
     }
@@ -237,8 +221,8 @@ body > .skiptranslate {
         font-size: 13px;
         padding: 4px 8px;
     }
- 
 }
+
 /* Dispositivos plegables en modo HALF_OPENED */
 @media (screen-spanning: single-fold-vertical) {
     .policy-container {
@@ -249,4 +233,47 @@ body > .skiptranslate {
     }
 }
 
+/* ===== Estilos de Términos de uso ===== */
+/* (idénticos a los de Política sin la tabla) */
 
+/* Fuente Material Design */
+body {
+    /* ya definido más arriba */
+}
+
+/* Contenedor principal */
+.policy-container {
+    /* ya definido más arriba */
+}
+
+/* Títulos, secciones, listas, enlaces, traducción... */
+/* todas las reglas anteriores aplican también aquí */
+
+/* Responsive en términos de uso */
+@media screen and (max-width: 768px) {
+    .policy-container { padding: 16px; }
+    .policy-title    { font-size: 22px; }
+    .policy-section-title { font-size: 18px; }
+}
+
+@media screen and (max-width: 480px) {
+    .policy-container {
+        width: auto;
+        margin: 0 12px;
+        padding: 12px;
+        border-radius: 8px;
+    }
+    .policy-title { font-size: 20px; }
+
+    #custom_translate_wrapper { padding: 8px; }
+    #custom_translate         { font-size: 13px; padding: 4px 8px; }
+}
+
+@media (screen-spanning: single-fold-vertical) {
+    .policy-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 16px;
+        max-width: 100%;
+    }
+}
