@@ -202,18 +202,25 @@ body > .skiptranslate {
 }
 
 /* Teléfonos */
-@media screen and (max-width: 480px) {
+ @media screen and (max-width: 480px) {
     .policy-container {
-        /* En lugar de width:100% y border-radius:0 */
-        width: auto;                 /* deja que el contenedor use su ancho máximo */
-        max-width: 100%;             /* hasta el 100% del viewport */
-        padding: 12px;               /* relleno interno */
-        margin: 0 8px;               /* márgenes laterales */
-        border-radius: 12px;         /* mantiene esquinas redondeadas */
+        width: 100%;
+        padding: 12px;      /* ya lo tienes */
+        border-radius: 0;
     }
-    .policy-title {
-        font-size: 20px;
+
+    /* Ajuste para la tabla */
+    .policy-table-wrapper {
+        /* crea un “acolchado” horizontal extra */
+        padding: 0 12px;
     }
+
+    .policy-table {
+        /* permite que la tabla ocupe como máximo el 100% del ancho disponible */
+        min-width: auto;  /* elimina el min-width de 600px */
+        width: 100%;
+    }
+
     .policy-table thead th,
     .policy-table td {
         padding: 8px 6px;
