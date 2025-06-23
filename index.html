@@ -29,7 +29,7 @@
 
   <main class="policy-container">
     <h1 class="policy-title">Política de Privacidad</h1>
-    <p class="policy-text"><strong>Última actualización:</strong> 18/06/2025</p>
+    <p class="policy-text"><strong>Última actualización:</strong> 22/06/2025</p>
     <p class="policy-text">
       En StepVital, operado por IgniSquare, respetamos y protegemos la privacidad de nuestros usuarios. IgniSquare es un nombre comercial utilizado para ofrecer servicios tecnológicos y desarrollar aplicaciones móviles. Cumplimos con normativas internacionales, como el GDPR en la Unión Europea y la CCPA en California, así como con la legislación local de la República Dominicana. Esta política describe de manera clara y transparente cómo recopilamos, usamos, almacenamos y protegemos la información personal y de actividad que nos proporcionas.
     </p>
@@ -67,12 +67,6 @@
           <td>Datos de uso y rendimiento<br>(clics, vistas, errores)</td>
           <td>Análisis y mejora de la app</td>
           <td>Firebase Analytics, Crashlytics, Performance</td>
-          <td>Sí / Sí</td>
-        </tr>
-        <tr>
-          <td>Identificador único de dispositivo (deviceId)</td>
-          <td>Seguridad de sesión</td>
-          <td>Firebase Firestore</td>
           <td>Sí / Sí</td>
         </tr>
          <tr>
@@ -225,18 +219,26 @@ Para todas las funciones que requieren Internet (inicio de sesión, lectura de a
 
 
 <section>
-  <p class="policy-text"><strong>1.7. Identificador Único del Dispositivo</strong></p>
+  <p class="policy-text"><strong>1.7. Información del Sistema</strong></p>
   <p class="policy-text">
-    Para gestionar de forma segura las sesiones de usuario y prevenir accesos simultáneos, StepVital recopila un identificador único de tu dispositivo (deviceId).  
-    <strong>Uso:</strong> Asociar tu cuenta a un solo dispositivo activo y evitar inconsistencias en la restauración de datos.<br>
-    <strong>Almacenamiento:</strong> Este valor se guarda únicamente en Firestore en la colección <code>sessions/{userId}</code> y no se comparte con terceros.  
-    <strong>Retención:</strong> Se elimina automáticamente cuando cierras sesión.  
-  </p>
-    <p class="policy-text">
-    <strong>Información del Sistema:</strong> además del deviceId, StepVital recopila la versión de la app, el modelo de dispositivo, la versión del sistema operativo, la resolución de pantalla (ancho×alto) y la densidad de píxeles (DPI).  
-    Esta información se utiliza <strong>únicamente</strong> para identificar el dispositivo en el que ocurrió un error, ofrecer un soporte más preciso y ajustar futuras correcciones a dispositivos concretos.
+    StepVital recopila datos básicos del sistema para ayudar en la detección y resolución de errores.  
+    <strong>Datos recogidos:</strong>  
+    <ul class="policy-list">
+      <li><strong>Versión de la app:</strong> número de versión instalado.</li>
+      <li><strong>Modelo de dispositivo:</strong> nombre o código del hardware.</li>
+      <li><strong>Versión del sistema operativo:</strong> versión de Android o iOS.</li>
+      <li><strong>Resolución de pantalla:</strong> ancho × alto en píxeles.</li>
+      <li><strong>Densidad de píxeles (DPI):</strong> valor calculado a partir del PixelRatio.</li>
+    </ul>
+    <strong>Uso:</strong> Esta información se emplea <strong>únicamente</strong> para:
+    <ul class="policy-list">
+      <li>Identificar en qué dispositivo ocurre un fallo.</li>
+      <li>Ofrecer un soporte técnico más preciso y adaptado a cada modelo.</li>
+      <li>Orientar futuras correcciones y optimizaciones específicas por dispositivo.</li>
+    </ul>
   </p>
 </section>
+    
 
     <section>
   <h2 class="policy-section-title">1.8. Detección de Región e Idioma</h2>
@@ -499,9 +501,6 @@ Para todas las funciones que requieren Internet (inicio de sesión, lectura de a
       <strong>Datos de Uso y Rendimiento:</strong> Se retienen durante 12 meses para análisis y mejora de la app.
     </li>
     <li>
-      <strong>Identificador Único del Dispositivo (deviceId):</strong> Se guarda mientras exista la sesión activa; eliminado automáticamente al cerrar sesión.
-    </li>
-    <li>
       <strong>Advertising ID:</strong> Se conserva hasta que retires tu consentimiento o elimines la aplicación.
     </li>
     <li>
@@ -522,7 +521,7 @@ Para todas las funciones que requieren Internet (inicio de sesión, lectura de a
       <section>
         <p class="policy-text"><strong>4.3. Copia de Seguridad y Restauración Automática</strong></p>
         <p class="policy-text">
-      Al iniciar sesión con Google Sign‑In, se crea automáticamente un respaldo de tu base de datos en la nube (Firebase). Si existe un backup previo, se restaura de inmediato toda tu información. Este proceso se ejecuta cada 12 horas de forma automática y también puede iniciarse manualmente desde Ajustes > Backup.
+      Al iniciar sesión con Google Sign‑In, se crea automáticamente un respaldo de tu base de datos en la nube (Firebase). Si existe un backup previo, se restaura de inmediato toda tu información. Este proceso se ejecuta cada 24 horas de forma automática y también puede iniciarse manualmente desde Ajustes > Backup.
       </p>
       </section>
     </section>
@@ -535,8 +534,7 @@ Para todas las funciones que requieren Internet (inicio de sesión, lectura de a
   <li><strong>Art. 6(1)(a) GDPR – Consentimiento:</strong> para anuncios personalizados y análisis demográfico.</li>
   <li><strong>Art. 6(1)(b) GDPR – Ejecución de contrato:</strong> para registro, autenticación y copias de seguridad automáticas.</li>
   <li><strong>Art. 6(1)(c) GDPR – Obligaciones legales:</strong> para cumplimiento normativo y retención de facturación.</li>
-  <li><strong>Art. 6(1)(f) GDPR – Intereses legítimos:</strong> para seguridad de sesión (deviceId) y mejora de producto.</li>
-</ul>
+ </ul>
 <p class="policy-text">
   Puedes retirar tu consentimiento tan fácilmente como lo diste (Art. 7(3) GDPR) desde Ajustes → Ajuste de privacidad → Consentimiento.
 </p>
