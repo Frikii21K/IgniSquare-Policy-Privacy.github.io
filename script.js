@@ -24,7 +24,7 @@ function triggerTranslation() {
   } else {
     // Detecta el idioma del usuario
     let userLang = navigator.language.slice(0, 2); // Obtenemos el código de idioma
-    const allowedLanguages = ["es", "en", "fr", "pt", "de"];
+    const allowedLanguages = ["es", "en", "fr", "pt-BR", "de", "it"];
     if (!allowedLanguages.includes(userLang)) {
       userLang = "en"; // Traducir a inglés por defecto
     }
