@@ -31,7 +31,7 @@
   
   <main class="policy-container">
     <h1 class="policy-title">Política de Privacidade – LGPD (Brasil)</h1>
-    <p class="policy-text"><strong>Última atualização:</strong> 22/06/2025</p>
+    <p class="policy-text"><strong>Última atualização:</strong> 10/03/2026</p>
 
     <!-- Âmbito de Aplicação -->
     <section id="ambito-lgpd">
@@ -44,14 +44,13 @@
     <!-- Cumprimento LGPD -->
     <section id="cumplimiento-lgpd">
       <h2 class="policy-section-title">Cumprimento LGPD</h2>
-      <h3 class="policy-subsection-title">Bases Legais (Art. 7 LGPD)</h3>
-      <ul class="policy-list">
-        <li><strong>Consentimento (Art. 7 I):</strong> anúncios personalizados e análise demográfica.</li>
-        <li><strong>Execução de contrato (Art. 7 V):</strong> registro, autenticação e assinaturas.</li>
-        <li><strong>Legítimo interesse (Art. 7 IX):</strong> segurança e melhoria contínua do serviço.</li>
-        <li><strong>Obrigações legais (Art. 7 VI):</strong> cumprimento de obrigações fiscais e contábeis.</li>
-      </ul>
-
+          <h3 class="policy-subsection-title">Bases Legais (Art. 7 LGPD)</h3>
+          <ul class="policy-list">
+            <li><strong>Consentimento (Art. 7, I):</strong> anúncios personalizados, análise demográfica e participação na Liga Semanal e comunidade.</li>
+            <li><strong>Execução de contrato (Art. 7, V):</strong> registro, autenticação e backups automáticos.</li>
+            <li><strong>Legítimo interesse (Art. 7, IX):</strong> segurança e melhoria contínua do serviço.</li>
+            <li><strong>Obrigações legais (Art. 7, VI):</strong> cumprimento de obrigações fiscais e contábeis.</li>
+          </ul>
       <h3 class="policy-subsection-title">Direitos dos Titulares (Art. 18 LGPD)</h3>
       <p class="policy-text">
         Para exercer seus direitos, envie solicitação para <a href="mailto:ignisquare@gmail.com">ignisquare@gmail.com</a>. Responderemos em até 15 dias:
@@ -87,6 +86,85 @@
     </section>
 
 
+<section id="liga-semanal-lgpd">
+  <h2 class="policy-section-title">Liga Semanal e Comunidade – Privacidade e LGPD</h2>
+
+  <p class="policy-text">
+    O StepVital oferece uma funcionalidade competitiva opcional denominada <strong>Liga Semanal</strong>, que permite aos usuários comparar sua atividade física com outros participantes em um ranking semanal. A seguir, descrevemos o tratamento de dados pessoais associado a esta funcionalidade em conformidade com a Lei Geral de Proteção de Dados (LGPD – Lei 13.709/2018).
+  </p>
+
+  <h3 class="policy-subsection-title">Base Legal (Art. 7 e Art. 11 LGPD)</h3>
+  <p class="policy-text">
+    O tratamento de todos os dados associados à Liga Semanal tem como base legal exclusiva o <strong>consentimento específico, destacado e livre do titular</strong> (Art. 7, I, LGPD), materializado mediante a ativação explícita do <em>Master Toggle</em> em Configurações → Ajuste de privacidade → Comunidade. Nenhum dado comunitário é coletado ou publicado antes dessa ação voluntária do usuário.
+  </p>
+
+  <h3 class="policy-subsection-title">Dados Tratados ao Participar da Liga</h3>
+  <ul class="policy-list">
+    <li>
+      <strong>Perfil público (<code>publicProfiles/{uid}</code>):</strong> nome de exibição, URL da foto de perfil e código de país, <em>somente se o usuário ativar cada controle individualmente</em>. O usuário pode participar de forma completamente anônima sem fornecer nenhum desses dados.
+    </li>
+    <li>
+      <strong>Dados de ranking (<code>leagues/{weekId}/rankings/{uid}</code>):</strong> XP acumulado na semana, carimbo de tempo da última atualização, título de liga, status do multiplicador x2 e contadores de reações recebidas (🔥 👟 👏). O XP inicial ao criar o documento é sempre 0.
+    </li>
+    <li>
+      <strong>Código de país por fuso horário:</strong> inferido exclusivamente a partir do fuso horário IANA do dispositivo usando a API nativa <code>Intl.DateTimeFormat().resolvedOptions()</code>. <strong>O StepVital não solicita nem acessa a permissão de localização (GPS) do dispositivo.</strong>
+    </li>
+  </ul>
+
+  <h3 class="policy-subsection-title">Natureza dos Elementos de Gamificação</h3>
+  <p class="policy-text">
+    Os Pontos de Experiência (XP), os títulos de liga e o multiplicador x2 são elementos de gamificação de finalidade exclusivamente motivacional. <strong>Estes elementos não possuem valor monetário, não são resgatáveis, não são transferíveis e não constituem qualquer ativo digital.</strong> O XP semanal é reiniciado a cada ciclo e não se acumula entre semanas.
+  </p>
+
+  <h3 class="policy-subsection-title">Direito ao Esquecimento Imediato (Art. 18, VI, LGPD)</h3>
+  <p class="policy-text">
+    Ao desativar o Master Toggle, o StepVital executa automaticamente e de forma imediata:
+  </p>
+  <ul class="policy-list">
+    <li>Exclusão do documento <code>publicProfiles/{uid}</code> no Firestore.</li>
+    <li>Exclusão do documento <code>leagues/{weekId}/rankings/{uid}</code> da semana ativa no Firestore.</li>
+    <li>Limpeza do XP acumulado e do estado de sincronização pendente no banco de dados SQLite local do dispositivo.</li>
+  </ul>
+  <p class="policy-text">
+    Esta operação equivale ao exercício do <strong>direito de eliminação dos dados pessoais</strong> relativos à participação ativa na comunidade, sem necessidade de contatar o suporte. Os registros históricos de rankings de semanas anteriores são eliminados exclusivamente mediante a exclusão da conta.
+  </p>
+
+  <h3 class="policy-subsection-title">Exclusão Completa via Eliminação de Conta</h3>
+  <p class="policy-text">
+    Ao eliminar a conta, são excluídos de forma permanente e irreversível:
+  </p>
+  <ul class="policy-list">
+    <li>Documento <code>publicProfiles/{uid}</code>.</li>
+    <li>Documento <code>achievementStats/{uid}</code>.</li>
+    <li>Documento <code>termsConsents/{uid}</code>.</li>
+    <li>Todos os documentos <code>leagues/{weekId}/rankings/{uid}</code> em todas as semanas em que o usuário participou, mediante operação de consulta de grupo de coleções (<code>collectionGroup("rankings")</code>).</li>
+    <li>Banco de dados SQLite local, incluindo XP, estado de sincronização e cache do ranking.</li>
+  </ul>
+
+  <h3 class="policy-subsection-title">Controles Individuais de Privacidade</h3>
+  <p class="policy-text">
+    Enquanto o Master Toggle estiver ativo, o usuário dispõe de três controles independentes que pode modificar a qualquer momento dentro do ciclo semanal ativo:
+  </p>
+  <ul class="policy-list">
+    <li><strong>Exibir nome:</strong> se desativado, o usuário aparece no ranking com identificador anônimo.</li>
+    <li><strong>Exibir foto:</strong> se desativado, exibe avatar genérico em vez da foto do perfil Google.</li>
+    <li><strong>Exibir país:</strong> se desativado, nenhuma bandeira é exibida. O país é inferido por fuso horário, sem GPS.</li>
+  </ul>
+  <p class="policy-text">
+    Cada controle possui um período de <em>cooldown</em> até o encerramento da semana ativa (domingo 23h59min59s UTC) para garantir a integridade do ranking em curso.
+  </p>
+
+  <h3 class="policy-subsection-title">Direitos do Titular Aplicáveis (Art. 18 LGPD)</h3>
+  <p class="policy-text">
+    Para exercer quaisquer direitos relacionados aos dados da Liga Semanal, envie solicitação para <a href="mailto:ignisquare@gmail.com">ignisquare@gmail.com</a>. Responderemos em até 15 dias.
+  </p>
+  <ul class="policy-list">
+    <li><strong>Eliminação imediata dos dados ativos da Liga:</strong> desative o Master Toggle em Configurações → Ajuste de privacidade → Comunidade.</li>
+    <li><strong>Eliminação completa incluindo histórico:</strong> elimine sua conta conforme descrito em Configurações → Ajuste de privacidade.</li>
+    <li><strong>Portabilidade, acesso e retificação:</strong> entre em contato com o suporte pelo e-mail acima.</li>
+  </ul>
+</section>
+    
 <!-- Dados de Saúde e Condicionamento Físico -->
 <section id="dados-saude-lgpd">
   <h2 class="policy-section-title">Dados de Saúde e Condicionamento Físico (Health Connect)</h2>
