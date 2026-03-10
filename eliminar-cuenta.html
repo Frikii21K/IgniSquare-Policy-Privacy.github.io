@@ -35,45 +35,52 @@
       En StepVital, operado por IgniSquare, respetamos tu derecho a la privacidad y te ofrecemos varias formas de eliminar tu cuenta y los datos asociados. A continuación, se detallan:
     </p>
 
-    <section>
-      <h2 class="policy-section-title">1. Eliminación desde la app</h2>
-      <p class="policy-text">
-        Puedes borrar tu cuenta y todos tus datos directamente desde la aplicación siguiendo uno de estos dos métodos:
-      </p>
+
+    
+<section>
+  <h2 class="policy-section-title">1. Eliminación desde la app</h2>
+  <p class="policy-text">
+    Puedes borrar tu cuenta y todos tus datos directamente desde la aplicación siguiendo uno de estos dos métodos:
+  </p>
+  <ul class="policy-list">
+    <li>
+      <strong>Opción A:</strong>  
+      En la pantalla de "Cerrar sesión", pulsa "Eliminar cuenta".  
       <ul class="policy-list">
-        <li>
-          <strong>Opción A:</strong>  
-          En la pantalla de “Cerrar sesión”, pulsa “Eliminar cuenta”.  
-          <ul class="policy-list">
-            <li>Se mostrará un mensaje:  
-              “Esto borrará su cuenta permanentemente, junto con todos sus datos locales y en la nube como: pasos, distancias recorridas, calorías quemadas, logros, etc.”  
-            </li>
-            <li>Se abrirá un segundo modal con una cuenta regresiva de 10 segundos antes de habilitar el botón de confirmación.</li>
-            <li>Presiona “Confirmar” para eliminar de forma inmediata e irreversible:
-              <ul class="policy-list">
-                <li>Tu cuenta en Firebase Authentication y Firestore.</li>
-                <li>Todos los backups en la nube (Firebase).</li>
-                <li>La base de datos local de la app.</li>
-                <li>Se restablecerá la aplicación a su estado inicial.</li>
-              </ul>
-            </li>
-          </ul>
+        <li>Se mostrará un mensaje:  
+          "Esto borrará su cuenta permanentemente, junto con todos sus datos locales y en la nube como: pasos, distancias recorridas, calorías quemadas, logros, etc."  
         </li>
-        <li>
-          <strong>Opción B:</strong>  
-          Desde la sección de Ajustes:
+        <li>Se abrirá un segundo modal con una cuenta regresiva de 10 segundos antes de habilitar el botón de confirmación.</li>
+        <li>Presiona "Confirmar" para eliminar de forma inmediata e irreversible:
           <ul class="policy-list">
-            <li>Ve a <em>Ajustes → Ajuste de privacidad → Eliminar datos</em>.</li>
-            <li>O toca el icono “⋮” junto a tu correo en Ajustes, selecciona “Eliminar cuenta” y espera 10 segundos para confirmar.</li>
-            <li>Al confirmar, se elimina de inmediato tu cuenta y todos los datos locales y en la nube (pasos, distancias, calorías, configuraciones, identificador de dispositivo, etc.).</li>
+            <li>Tu cuenta en Firebase Authentication y Firestore.</li>
+            <li>Todos los backups en la nube (Firebase).</li>
+            <li>La base de datos local de la app.</li>
+            <li>Se restablecerá la aplicación a su estado inicial.</li>
           </ul>
         </li>
       </ul>
-      <p class="policy-text">
-        <strong>Nota:</strong>  
-        Estos procesos borran todo lo relacionado con tu cuenta en Firebase (autenticación, Firestore, respaldos) y también eliminan los datos almacenados localmente en tu dispositivo.
-      </p>
-    </section>
+    </li>
+    <li>
+      <strong>Opción B:</strong>  
+      Desde la sección de Ajustes:
+      <ul class="policy-list">
+        <li>Ve a <em>Ajustes → Ajuste de privacidad → Eliminar datos</em>.</li>
+        <li>O toca el icono "⋮" junto a tu correo en Ajustes, selecciona "Eliminar cuenta" y espera 10 segundos para confirmar.</li>
+        <li>Al confirmar, se elimina de inmediato tu cuenta y todos los datos locales y en la nube (pasos, distancias, calorías, configuraciones, identificador de dispositivo, etc.).</li>
+      </ul>
+    </li>
+  </ul>
+  <p class="policy-text">
+    <strong>Nota:</strong>  
+    Estos procesos borran todo lo relacionado con tu cuenta en Firebase (autenticación, Firestore, respaldos) y también eliminan los datos almacenados localmente en tu dispositivo, incluyendo tu presencia en todos los rankings históricos de la Liga Semanal.
+  </p>
+  <p class="policy-text">
+    <strong>¿Solo quieres abandonar la Liga sin eliminar tu cuenta?</strong><br>
+    Si únicamente deseas dejar de participar en la comunidad y el ranking semanal, no es necesario eliminar tu cuenta. Ve a Ajustes → Ajuste de privacidad → Comunidad y desactiva el <strong>Master Toggle</strong>. Esta acción eliminará de forma inmediata tu perfil público y tu presencia en el ranking activo, sin afectar tus datos de actividad física.
+  </p>
+</section>
+    
 
     <section>
       <h2 class="policy-section-title">2. Eliminación manual vía correo</h2>
@@ -97,21 +104,38 @@
       </p>
     </section>
 
-    <section>
-      <h2 class="policy-section-title">3. ¿Qué datos se eliminarán?</h2>
-      <p class="policy-text">
-        Cuando elimines tu cuenta, se borrarán de forma permanente:
-      </p>
-      <ul class="policy-list">
-        <li><strong>Datos de actividad física:</strong> pasos, distancia recorrida, calorías quemadas y otros registros almacenados en la nube.</li>
-        <li><strong>Información de perfil:</strong> género, altura, peso, edad y cualquier otra configuración que hayas proporcionado.</li>
-        <li><strong>Datos de uso y rendimiento:</strong> clics, vistas de pantalla, métricas de uso, errores, etc., recopilados en Firebase Analytics y Crashlytics.</li>
-        <li><strong>Identificador único del dispositivo (deviceId):</strong> registros en la colección de sesiones en Firestore.</li>
-        <li><strong>Backups automáticos:</strong> todos los respaldos de tu base de datos en la nube (Firebase) se eliminarán.</li>
-        <li><strong>Base de datos local:</strong> todos los registros y configuraciones almacenados en SQLite se borrarán.</li>
-        <li><strong>Advertising ID:</strong> si estabas usando anuncios no personalizados, se eliminará el vínculo con tu ID publicitario.</li>
-      </ul>
-    </section>
+<section>
+  <h2 class="policy-section-title">3. ¿Qué datos se eliminarán?</h2>
+  <p class="policy-text">
+    Cuando elimines tu cuenta, se borrarán de forma permanente e irreversible todos los datos siguientes:
+  </p>
+  <ul class="policy-list">
+    <li><strong>Cuenta de Firebase Authentication:</strong> credenciales de acceso y sesión activa.</li>
+    <li><strong>Datos de actividad física:</strong> pasos, distancia recorrida, calorías quemadas y otros registros almacenados en la nube.</li>
+    <li><strong>Información de perfil:</strong> género, altura, peso, edad y cualquier otra configuración proporcionada.</li>
+    <li><strong>Datos de uso y rendimiento:</strong> clics, vistas de pantalla, métricas de uso y errores recopilados en Firebase Analytics y Crashlytics.</li>
+    <li><strong>Identificador único del dispositivo (deviceId):</strong> registros en la colección de sesiones en Firestore.</li>
+    <li><strong>Backups automáticos:</strong> todos los respaldos de la base de datos en la nube (Firebase).</li>
+    <li><strong>Base de datos local (SQLite):</strong> todos los registros y configuraciones almacenados en el dispositivo, incluyendo XP acumulado, estado de sincronización de la Liga y caché del ranking.</li>
+    <li><strong>Foto de perfil (caché local):</strong> almacenada únicamente en el dispositivo; se elimina automáticamente al confirmar la eliminación de cuenta.</li>
+    <li><strong>Advertising ID:</strong> se elimina el vínculo con el identificador publicitario.</li>
+    <li>
+      <strong>Perfil público de comunidad (<code>publicProfiles/{uid}</code>):</strong> documento de Firestore que contiene las preferencias de visibilidad y los datos opcionales de perfil publicados en la Liga. Se elimina completamente.
+    </li>
+    <li>
+      <strong>Historial de logros (<code>achievementStats/{uid}</code>):</strong> documento de Firestore con el registro de logros desbloqueados. Se elimina completamente.
+    </li>
+    <li>
+      <strong>Registro de consentimiento de términos (<code>termsConsents/{uid}</code>):</strong> documento de Firestore con el historial de aceptación de términos. Se elimina completamente.
+    </li>
+    <li>
+      <strong>Presencia en todos los rankings históricos de la Liga Semanal:</strong> mediante una operación de consulta de grupo de colecciones (<code>collectionGroup("rankings")</code>), se localizan y eliminan de forma permanente todos los documentos <code>leagues/{weekId}/rankings/{uid}</code> correspondientes a todas las semanas en que el usuario haya participado, sin excepción. Esto incluye la semana activa y todas las semanas anteriores.
+    </li>
+  </ul>
+  <p class="policy-text">
+    <strong>Nota sobre la Liga Semanal:</strong> las reacciones recibidas (🔥 👟 👏) se almacenan como campos dentro del propio documento de ranking del usuario y se eliminan junto con dicho documento en la operación anterior. No existe ninguna colección separada de reacciones que requiera eliminación adicional.
+  </p>
+</section>
 
     <section>
       <h2 class="policy-section-title">4. Retenciones y exclusiones</h2>
