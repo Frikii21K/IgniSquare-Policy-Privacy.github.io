@@ -30,7 +30,7 @@
   
   <main class="policy-container">
     <h1 class="policy-title">Privacy Policy – PIPEDA (Canadá)</h1>
-    <p class="policy-text"><strong>Última actualización:</strong> 22/06/2025</p>
+    <p class="policy-text"><strong>Última actualización:</strong> 10/03/2026</p>
 
     <!-- Cumplimiento PIPEDA -->
     <section id="cumplimiento-pipeda">
@@ -63,6 +63,95 @@
         <li><strong>Plazo de respuesta:</strong> hasta 30 días hábiles</li>
       </ul>
     </section>
+
+    <section id="liga-semanal-pipeda">
+  <h2 class="policy-section-title">Weekly League and Community – Privacy & PIPEDA</h2>
+
+  <p class="policy-text">
+    StepVital includes an optional competitive feature called the <strong>Weekly League</strong>, which allows users to compare their physical activity with other participants in a weekly ranking. The following describes how personal data associated with this feature is handled in accordance with the Personal Information Protection and Electronic Documents Act (PIPEDA).
+  </p>
+
+  <h3 class="policy-subsection-title">PIPEDA Compliance</h3>
+  <ul class="policy-list">
+    <li>
+      <strong>Consent (Principle 3):</strong> All data processing related to the Weekly League is based exclusively on the user's explicit, informed, and freely given consent, activated through the <em>Master Toggle</em> in Settings → Privacy Settings → Community. No community data is collected or published prior to this voluntary action. The user may withdraw consent at any time by deactivating the Master Toggle, with immediate effect.
+    </li>
+    <li>
+      <strong>Purpose Identification (Principle 2):</strong> Community data is used solely to display the user's position in the weekly competitive ranking within the app and to provide motivational gamification elements. Data is never used for advertising, profiling, or any commercial purpose.
+    </li>
+    <li>
+      <strong>Limiting Collection (Principle 4):</strong> Only the data strictly necessary for ranking functionality is collected. Each visibility field (name, photo, country) is individually optional. A user may participate fully anonymously by leaving all three controls disabled.
+    </li>
+    <li>
+      <strong>Limiting Use, Disclosure and Retention (Principle 5):</strong> Community data is accessible only to authenticated app participants. Active ranking data is deleted immediately upon deactivation of the Master Toggle. Historical ranking records across all weeks are deleted permanently upon account deletion via a collection group query (<code>collectionGroup("rankings")</code>).
+    </li>
+    <li>
+      <strong>Accuracy (Principle 6):</strong> Users may update their visible profile information at any time through the individual visibility controls in Privacy Settings.
+    </li>
+    <li>
+      <strong>Safeguards (Principle 7):</strong> All data is encrypted in transit (HTTPS/TLS) and at rest (Firebase). Firestore security rules enforce that a user can only modify their own ranking document and that XP increments per write are capped to prevent abuse.
+    </li>
+    <li>
+      <strong>Openness (Principle 8):</strong> This section and the main Privacy Policy fully disclose the nature of the Weekly League data, its storage locations, retention periods, and the user's rights over it.
+    </li>
+    <li>
+      <strong>Individual Access (Principle 9):</strong> Users may access, correct, or request deletion of their community data at any time through the in-app controls or by contacting <a href="mailto:ignisquare@gmail.com">ignisquare@gmail.com</a>.
+    </li>
+  </ul>
+
+  <h3 class="policy-subsection-title">Data Processed When Participating in the League</h3>
+  <ul class="policy-list">
+    <li>
+      <strong>Public profile (<code>publicProfiles/{uid}</code>):</strong> display name, profile photo URL, and country code — only if the user enables each control individually.
+    </li>
+    <li>
+      <strong>Ranking data (<code>leagues/{weekId}/rankings/{uid}</code>):</strong> weekly XP score, last update timestamp, league title, x2 multiplier status, and received reaction counters (🔥 👟 👏).
+    </li>
+    <li>
+      <strong>Country code inferred from time zone:</strong> derived exclusively from the device's IANA time zone using the native <code>Intl.DateTimeFormat().resolvedOptions()</code> API. <strong>StepVital does not request or access GPS or location permissions.</strong>
+    </li>
+  </ul>
+
+  <h3 class="policy-subsection-title">Nature of Gamification Elements</h3>
+  <p class="policy-text">
+    The XP system, league titles, and x2 multiplier are motivational gamification elements only. <strong>They have no monetary value, are not redeemable, are not transferable, and do not constitute any form of digital asset.</strong> Weekly XP resets at the start of each new cycle and does not carry over between weeks.
+  </p>
+
+  <h3 class="policy-subsection-title">Right to Erasure — Immediate Effect</h3>
+  <p class="policy-text">
+    Deactivating the Master Toggle triggers the following immediate automated operations:
+  </p>
+  <ul class="policy-list">
+    <li>Deletion of <code>publicProfiles/{uid}</code> from Firestore.</li>
+    <li>Deletion of <code>leagues/{weekId}/rankings/{uid}</code> for the active week from Firestore.</li>
+    <li>Clearing of accumulated XP and pending sync state from the local SQLite database on the device.</li>
+  </ul>
+  <p class="policy-text">
+    Complete erasure of all historical ranking records across all weeks is performed only upon full account deletion.
+  </p>
+
+  <h3 class="policy-subsection-title">Account Deletion — Complete Data Purge</h3>
+  <p class="policy-text">
+    Upon account deletion, the following are permanently and irreversibly removed:
+  </p>
+  <ul class="policy-list">
+    <li>Document <code>publicProfiles/{uid}</code>.</li>
+    <li>Document <code>achievementStats/{uid}</code>.</li>
+    <li>Document <code>termsConsents/{uid}</code>.</li>
+    <li>All <code>leagues/{weekId}/rankings/{uid}</code> documents across all weeks via <code>collectionGroup("rankings")</code> query.</li>
+    <li>Local SQLite database including XP, sync state, and ranking cache.</li>
+  </ul>
+
+  <h3 class="policy-subsection-title">Individual Rights Under PIPEDA</h3>
+  <p class="policy-text">
+    To exercise any rights related to Weekly League data, contact <a href="mailto:ignisquare@gmail.com">ignisquare@gmail.com</a>. We will respond within 30 business days.
+  </p>
+  <ul class="policy-list">
+    <li><strong>Immediate erasure of active League data:</strong> deactivate the Master Toggle in Settings → Privacy Settings → Community.</li>
+    <li><strong>Complete erasure including historical data:</strong> delete your account via Settings → Privacy Settings.</li>
+    <li><strong>Access, correction, or portability:</strong> contact support at the email above.</li>
+  </ul>
+</section>
 
     <!-- Health and Fitness Data -->
 <section id="health-data-pipeda">
