@@ -30,7 +30,7 @@
 
   <main class="policy-container">
     <h1 class="policy-title">Política de Privacidad</h1>
-    <p class="policy-text"><strong>Última actualización:</strong> 20/12/2025</p>
+    <p class="policy-text"><strong>Última actualización:</strong> 10/03/2026</p>
     <p class="policy-text">
       En StepVital, operado por IgniSquare, respetamos y protegemos la privacidad de nuestros usuarios. IgniSquare es un nombre comercial utilizado para ofrecer servicios tecnológicos y desarrollar aplicaciones móviles. Cumplimos con normativas internacionales, como el GDPR en la Unión Europea y la CCPA en California, así como con la legislación local de la República Dominicana. Esta política describe de manera clara y transparente cómo recopilamos, usamos, almacenamos y protegemos la información personal y de actividad que nos proporcionas.
     </p>
@@ -69,7 +69,7 @@
 </section>
 
     
-  <section>
+<section>
   <h2 class="policy-section-title">Data Safety</h2>
   <p class="policy-text">
     En StepVital detallamos a continuación qué datos recogemos, con qué finalidad, con quién los compartimos y cómo los protegemos:
@@ -103,34 +103,70 @@
           <td>Firebase Analytics, Crashlytics, Performance</td>
           <td>Sí / Sí</td>
         </tr>
-
-      <tr>
-        <td><strong>Nombre de usuario<br>(displayName)</strong></td>
-        <td>Personalización y mensajes dinámicos (saludos de buenos días, tardes o noches)</td>
-        <td>No compartido<br>(solo en dispositivo)</td>
-        <td>Sí / Sí</td>
-      </tr>
-        
         <tr>
-  <td>Foto de perfil<br>(cache local)</td>
-  <td>Funcional (mostrar avatar en botones y modales)</td>
-  <td>No compartido<br>(se almacena sólo en el dispositivo)</td>
-  <td>Sí / Sí</td>
-</tr>
-         <tr>
+          <td><strong>Nombre de usuario<br>(displayName)</strong></td>
+          <td>Personalización y mensajes dinámicos (saludos de buenos días, tardes o noches)</td>
+          <td>No compartido<br>(solo en dispositivo)</td>
+          <td>Sí / Sí</td>
+        </tr>
+        <tr>
+          <td>Foto de perfil<br>(cache local)</td>
+          <td>Funcional (mostrar avatar en botones y modales)</td>
+          <td>No compartido<br>(se almacena sólo en el dispositivo)</td>
+          <td>Sí / Sí</td>
+        </tr>
+        <tr>
           <td>Advertising ID</td>
           <td>Consentimiento para anuncios</td>
           <td>No compartido<br>(gestión local)</td>
+          <td>Sí / Sí</td>
+        </tr>
+        <!-- ── FILAS NUEVAS: Liga Semanal ── -->
+        <tr>
+          <td><strong>Perfil público de comunidad</strong><br>
+            (nombre para mostrar, foto de perfil, código de país)<br>
+            <em>Solo si el usuario activa la participación en la Liga</em>
+          </td>
+          <td>Mostrar al usuario en el ranking semanal de la Liga.<br>
+            Cada campo es opcional e independiente: el usuario puede participar sin revelar ninguno de ellos.</td>
+          <td>Firebase Firestore<br>(<code>publicProfiles/{uid}</code>)<br>Visible para otros participantes autenticados</td>
+          <td>Sí / Sí</td>
+        </tr>
+        <tr>
+          <td><strong>Datos de ranking semanal</strong><br>
+            (XP acumulado en la semana, título de liga, estado del multiplicador x2, marca de tiempo de última actualización)<br>
+            <em>Solo si el usuario activa la participación en la Liga</em>
+          </td>
+          <td>Calcular la posición del usuario en el ranking semanal competitivo.<br>
+            El XP es una puntuación interna sin valor monetario.</td>
+          <td>Firebase Firestore<br>(<code>leagues/{weekId}/rankings/{uid}</code>)<br>Visible para otros participantes autenticados</td>
+          <td>Sí / Sí</td>
+        </tr>
+        <tr>
+          <td><strong>Reacciones recibidas</strong><br>
+            (contadores de 🔥 fuego, 👟 zapatilla, 👏 aplauso)<br>
+            <em>Solo si el usuario activa la participación en la Liga</em>
+          </td>
+          <td>Mostrar al usuario cuántas reacciones ha recibido de otros participantes durante la semana activa como elemento motivacional.</td>
+          <td>Firebase Firestore<br>(campos del mismo doc de ranking)<br>Visible para el propio usuario</td>
+          <td>Sí / Sí</td>
+        </tr>
+        <tr>
+          <td><strong>Código de país inferido por zona horaria</strong><br>
+            <em>Solo si el usuario activa "Mostrar país" en la configuración de comunidad</em>
+          </td>
+          <td>Mostrar la bandera del país del usuario junto a su posición en el ranking.<br>
+            <strong>No se utiliza GPS ni geolocalización activa.</strong> El país se deduce de la zona horaria IANA del dispositivo mediante <code>Intl.DateTimeFormat().resolvedOptions()</code>.</td>
+          <td>Firebase Firestore<br>(campo <code>pais_codigo</code> dentro del doc de ranking y <code>publicProfiles</code>)</td>
           <td>Sí / Sí</td>
         </tr>
       </tbody>
     </table>
   </div>
   <p class="policy-text">
-    Para eliminar tus datos desde la app: ve a Ajustes → Ajuste de privacidad → Eliminar datos<br>
-    O bien, toca el botón de los “⋮” junto a tu cuenta (correo) en Ajustes, selecciona “Eliminar cuenta” y espera 10 segundos para confirmar, o elimina tu cuenta desde Ajustes → Ajuste de privacidad. Todos tus datos locales y en la nube se borrarán.
+    Para eliminar tus datos desde la app: ve a Ajustes → Ajuste de privacidad → Eliminar datos.<br>
+    O bien, toca el botón de los "⋮" junto a tu cuenta (correo) en Ajustes, selecciona "Eliminar cuenta" y espera 10 segundos para confirmar. Todos tus datos locales y en la nube se borrarán, incluyendo tu presencia en todos los rankings históricos de la Liga.
   </p>
-    
 </section>
 
 
@@ -402,6 +438,86 @@ Para todas las funciones que requieren Internet (inicio de sesión, lectura de a
     <li>Los datos ya sincronizados en tu dispositivo permanecen disponibles localmente.</li>
   </ul>
 </section>
+
+
+<section id="liga-semanal-privacidad">
+  <h2 class="policy-section-title">1.10. Liga Semanal y Comunidad — Privacidad por Diseño</h2>
+
+  <p class="policy-text">
+    StepVital incorpora una funcionalidad competitiva opcional denominada <strong>Liga Semanal</strong>, que permite a los usuarios comparar su actividad física con otros participantes en un ranking semanal. Esta funcionalidad ha sido diseñada desde su base aplicando el principio de <strong>Privacidad por Diseño (Privacy by Design)</strong>, reconocido en el Art. 25 del GDPR: la protección de tus datos no es una opción posterior, sino una decisión arquitectónica tomada desde el primer momento.
+  </p>
+
+  <p class="policy-text"><strong>a) Participación completamente voluntaria y basada en consentimiento explícito</strong></p>
+  <p class="policy-text">
+    La Liga Semanal es una funcionalidad <strong>opt-in</strong>. Ningún dato relacionado con la comunidad se recoge ni se publica hasta que el usuario activa de forma consciente el <strong>Master Toggle</strong> ("Participar en la Liga") ubicado en Ajustes → Ajuste de privacidad → Comunidad. Esta acción constituye el consentimiento explícito al tratamiento de datos comunitarios en el sentido del Art. 6(1)(a) del GDPR. La base legal para el tratamiento de estos datos es exclusivamente dicho consentimiento, y no el interés legítimo ni la ejecución de contrato.
+  </p>
+
+  <p class="policy-text"><strong>b) Control granular en tiempo real</strong></p>
+  <p class="policy-text">
+    Una vez activa la participación, el usuario dispone de tres controles independientes que puede modificar en cualquier momento:
+  </p>
+  <ul class="policy-list">
+    <li><strong>Mostrar nombre:</strong> si está desactivado, el usuario aparece en el ranking con un identificador anónimo.</li>
+    <li><strong>Mostrar foto:</strong> si está desactivado, se muestra un avatar genérico en lugar de la foto de perfil de Google.</li>
+    <li><strong>Mostrar país:</strong> si está desactivado, no se muestra ninguna bandera junto al usuario. Si está activado, el país se deduce exclusivamente de la zona horaria IANA del dispositivo (véase el apartado siguiente). No se utiliza GPS ni ninguna forma de geolocalización activa.</li>
+  </ul>
+  <p class="policy-text">
+    El usuario puede participar activamente en la Liga de forma <strong>completamente anónima</strong> desactivando los tres controles anteriores. En ese caso, su presencia en el ranking será visible únicamente como un participante sin nombre, sin foto y sin país, pero su XP acumulado sí computará en la clasificación.
+  </p>
+  <p class="policy-text">
+    Cada uno de estos controles tiene un período de cooldown que dura hasta el cierre de la semana activa (domingo 23:59:59 UTC) para garantizar la estabilidad e integridad del ranking durante el ciclo competitivo en curso. Una vez cerrada la semana, los controles se desbloquean para el nuevo ciclo.
+  </p>
+
+  <p class="policy-text"><strong>c) Detección de país por zona horaria — sin GPS</strong></p>
+  <p class="policy-text">
+    StepVital <strong>no solicita ni accede al permiso de ubicación (GPS) del dispositivo</strong> en ningún momento. Cuando el usuario activa "Mostrar país", el código de país se infiere a partir de la zona horaria IANA reportada por el propio sistema operativo del dispositivo, utilizando la API nativa <code>Intl.DateTimeFormat().resolvedOptions().timeZone</code> de JavaScript (motor Hermes), sin dependencias externas y sin consultar ningún servidor. El resultado es un código ISO de país de dos letras (por ejemplo, <code>DO</code>, <code>ES</code>, <code>MX</code>) que se almacena en Firestore únicamente si el toggle correspondiente está activo. Esta inferencia puede no ser exacta en casos de usuarios con VPN o con zona horaria configurada manualmente.
+  </p>
+
+  <p class="policy-text"><strong>d) Datos que se almacenan en Firestore al participar</strong></p>
+  <p class="policy-text">
+    Al activar el Master Toggle, se crean o actualizan los siguientes documentos en Firestore:
+  </p>
+  <ul class="policy-list">
+    <li>
+      <strong><code>publicProfiles/{uid}</code>:</strong> almacena las preferencias de visibilidad del usuario (<code>showName</code>, <code>showPhoto</code>, <code>showCountry</code>) y, condicionalmente según dichas preferencias, el nombre para mostrar, la URL de la foto de perfil de Google y el código de país inferido.
+    </li>
+    <li>
+      <strong><code>leagues/{weekId}/rankings/{uid}</code>:</strong> almacena el XP acumulado en la semana activa, la marca de tiempo de la última actualización, las preferencias de visibilidad, los datos de perfil condicionales y los contadores de reacciones recibidas (<code>fire</code>, <code>shoes</code>, <code>clap</code>). El XP inicial al crear el documento es siempre 0.
+    </li>
+  </ul>
+  <p class="policy-text">
+    El historial de rankings de semanas anteriores (<code>leagues/{weekId}/rankings/{uid}</code> de semanas pasadas) se conserva de forma anonimizada para mantener la integridad de los registros históricos de la competición. Estos registros históricos se eliminan íntegramente al eliminar la cuenta (véase la sección de Retención y la sección de Eliminación de Cuenta en los Términos de Uso).
+  </p>
+
+  <p class="policy-text"><strong>e) Reacciones entre participantes</strong></p>
+  <p class="policy-text">
+    Los participantes pueden enviar reacciones motivacionales (🔥 fuego, 👟 zapatilla, 👏 aplauso) a otros usuarios del ranking. Estas reacciones se almacenan como campos numéricos enteros dentro del propio documento de ranking del usuario receptor (<code>leagues/{weekId}/rankings/{uid}</code>), sin crear colecciones separadas. Cada usuario puede enviar como máximo una reacción por día, límite gestionado de forma completamente local en el dispositivo sin consultas adicionales a Firebase. Los contadores de reacciones recibidas son visibles para el propio usuario como elemento motivacional. Los contadores se eliminan automáticamente junto con el documento de ranking al cerrar la semana o al eliminar la cuenta.
+  </p>
+
+  <p class="policy-text"><strong>f) Sistema de XP, títulos y multiplicadores — sin valor monetario</strong></p>
+  <p class="policy-text">
+    El sistema de Puntos de Experiencia (XP), los títulos de liga ("Impulso Vital", "Élite Vital", "Leyenda Vital") y el multiplicador x2 son elementos de gamificación diseñados exclusivamente con fines motivacionales. <strong>Estos elementos no tienen valor monetario, no son canjeables, no son transferibles y no constituyen un activo digital de ningún tipo.</strong> El XP semanal se reinicia cada semana y no se acumula entre ciclos. Los títulos son temporales y pueden perderse si el usuario no repite un resultado equivalente en la semana siguiente.
+  </p>
+
+  <p class="policy-text"><strong>g) Derecho al olvido inmediato mediante el Master Toggle</strong></p>
+  <p class="policy-text">
+    Si el usuario desactiva el Master Toggle, StepVital ejecuta de forma inmediata y automática las siguientes operaciones:
+  </p>
+  <ul class="policy-list">
+    <li>Eliminación del documento <code>publicProfiles/{uid}</code> en Firestore.</li>
+    <li>Eliminación del documento <code>leagues/{weekId}/rankings/{uid}</code> de la semana activa en Firestore, borrando así la presencia del usuario en el ranking en curso.</li>
+    <li>Limpieza del XP acumulado y del estado de sincronización pendiente en la base de datos local SQLite del dispositivo (<code>xp_actual</code>, <code>pending_xp_to_sync</code>).</li>
+  </ul>
+  <p class="policy-text">
+    Esta operación equivale al ejercicio del <strong>derecho de supresión (Art. 17 GDPR)</strong> sobre los datos comunitarios activos, sin necesidad de contactar con el equipo de soporte. Los registros históricos de rankings de semanas anteriores no se eliminan en esta acción; su eliminación completa se ejecuta únicamente al eliminar la cuenta.
+  </p>
+
+  <p class="policy-text"><strong>h) Base legal aplicable</strong></p>
+  <ul class="policy-list">
+    <li><strong>Art. 6(1)(a) GDPR – Consentimiento:</strong> toda la funcionalidad de la Liga Semanal y la publicación de datos en el ranking están condicionadas al consentimiento explícito del usuario mediante el Master Toggle. El usuario puede retirar este consentimiento en cualquier momento desactivando dicho toggle, con efecto inmediato.</li>
+  </ul>
+</section>
+
     
     <section>
       <h2 class="policy-section-title">2. Uso de la Información</h2>
@@ -638,7 +754,7 @@ Para todas las funciones que requieren Internet (inicio de sesión, lectura de a
       <h2 class="policy-section-title">4. Retención y Seguridad de la Información</h2>
       
 
-    <section>
+<section>
   <p class="policy-text"><strong>4.1. Retención</strong></p>
   <ul class="policy-list">
     <li>
@@ -651,17 +767,35 @@ Para todas las funciones que requieren Internet (inicio de sesión, lectura de a
       <strong>Datos de Uso y Rendimiento:</strong> Se retienen durante 12 meses para análisis y mejora de la app.
     </li>
     <li>
-  <strong>Foto de perfil (cache local):</strong>  
-  Se elimina automáticamente al cerrar sesión, al eliminar la cuenta o al desinstalar la aplicación.
-</li>
+      <strong>Foto de perfil (cache local):</strong> Se elimina automáticamente al cerrar sesión, al eliminar la cuenta o al desinstalar la aplicación.
+    </li>
     <li>
       <strong>Advertising ID:</strong> Se conserva hasta que retires tu consentimiento o elimines la aplicación.
+    </li>
+    <li>
+      <strong>Perfil público de comunidad (<code>publicProfiles/{uid}</code>):</strong> Se elimina inmediatamente cuando el usuario desactiva el Master Toggle de la Liga o al eliminar la cuenta. No se conserva copia de retención tras la eliminación.
+    </li>
+    <li>
+      <strong>Datos de ranking semanal activo (<code>leagues/{weekId}/rankings/{uid}</code>):</strong> Se eliminan inmediatamente al desactivar el Master Toggle o al eliminar la cuenta. Al cierre de cada semana, el documento del ranking activo deja de ser parte de la competición en curso; sus datos quedan retenidos en la colección histórica con el identificador de la semana correspondiente.
+    </li>
+    <li>
+      <strong>Rankings históricos de semanas anteriores:</strong> Se conservan de forma indefinida para mantener la integridad del historial competitivo de la Liga, pero son accesibles únicamente a participantes autenticados de la app. Se eliminan íntegramente, en todas las semanas, al eliminar la cuenta mediante la operación <code>collectionGroup("rankings")</code>.
+    </li>
+    <li>
+      <strong>XP y estado de sincronización local (SQLite):</strong> Se limpian automáticamente al desactivar el Master Toggle mediante <code>resetLocalXpProgress</code>. Se eliminan íntegramente al eliminar la cuenta o al desinstalar la aplicación.
+    </li>
+    <li>
+      <strong>Reacciones recibidas:</strong> Se almacenan como campos del documento de ranking semanal. Se eliminan junto con dicho documento al desactivar el Master Toggle (semana activa) o al eliminar la cuenta (todas las semanas).
     </li>
     <li>
       <strong>Alternativa:</strong> En caso de requerir asistencia, los usuarios pueden solicitar la eliminación manual de sus datos escribiéndonos a <a href="mailto:ignisquare@gmail.com">ignisquare@gmail.com</a>.
     </li>
   </ul>
 </section>
+
+
+
+      
       
 <section>
   <p class="policy-text"><strong>4.2. Medidas de Seguridad</strong></p>
@@ -763,27 +897,20 @@ Para todas las funciones que requieren Internet (inicio de sesión, lectura de a
   <h2 class="policy-section-title">8. Cambios en la Política de Privacidad</h2>
   <ul class="policy-list">
     <li>Nos reservamos el derecho a actualizar esta política de privacidad ocasionalmente.</li>
-    <li>Te notificaremos sobre cambios significativos mediante notificaciones push (Firebase) y actualizaremos la fecha de “Última actualización” aquí.</li>
+    <li>Te notificaremos sobre cambios significativos mediante notificaciones push (Firebase) y actualizaremos la fecha de "Última actualización" en este documento.</li>
     <li>Además, enviaremos un correo electrónico a los usuarios inactivos registrados para informarles de las actualizaciones más relevantes.</li>
     <li>Te recomendamos revisar esta política periódicamente.</li>
     <li>
-      <strong>Actualización para anuncios personalizados:</strong>  
-      A partir del 11/05/2025 solicitamos tu consentimiento <strong>sólo la primera vez</strong> que se cargue un anuncio de AdMob tras la actualización.  
+      <strong>Actualización para anuncios personalizados:</strong>
+      A partir del 11/05/2025 solicitamos tu consentimiento <strong>sólo la primera vez</strong> que se cargue un anuncio de AdMob tras la actualización.
+    </li>
+    <li>
+      <strong>Actualización por Liga Semanal:</strong>
+      A partir de la versión que introduce la Liga Semanal, se incorporan nuevas categorías de datos de comunidad (perfil público, ranking, reacciones). El tratamiento de estos datos está condicionado exclusivamente al consentimiento explícito del usuario y puede revocarse en cualquier momento desde Ajustes → Ajuste de privacidad → Comunidad.
     </li>
   </ul>
 </section>
-
-
-<section>
-  <h2 class="policy-section-title">8. Cambios en la Política de Privacidad</h2>
-  <ul class="policy-list">
-    <li>Nos reservamos el derecho a actualizar esta política de privacidad ocasionalmente.</li>
-    <li>Te notificaremos sobre cambios significativos mediante notificaciones push (Firebase) y actualizaremos la fecha de "Última actualización" aquí.</li>
-    <li>Además, enviaremos un correo electrónico a los usuarios inactivos registrados para informarles de las actualizaciones más relevantes.</li>
-    <li>Te recomendamos revisar esta política periódicamente.</li>
-  </ul>
-</section>
-
+    
     
     
     <section>
@@ -801,6 +928,7 @@ Para todas las funciones que requieren Internet (inicio de sesión, lectura de a
   <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
+
 
 
 
